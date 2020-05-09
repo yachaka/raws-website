@@ -1,0 +1,53 @@
+
+@import "./vars.scss";
+
+:global {
+
+  body {
+    background-color: $black;
+    font-family: Georgia;
+    color: $beige;
+  }
+
+  @font-face {
+    font-family: 'Recoleta Bold';
+    src: url('../assets/Recoleta Bold.otf');
+  }
+
+  .recoleta {
+    font-family: 'Recoleta Bold';
+    letter-spacing: 0.5px;
+  }
+
+  /******************************************/
+  /* GRID */
+
+  .container {
+    max-width: 1440px;
+  }
+
+  /******************************************/
+  /* TYPOGRAPHY */
+
+  .text1 {
+    font-size: 30px;
+  }
+  
+
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+    font-family: 'Recoleta Bold';
+    letter-spacing: 0.5px;
+
+    @media screen and (min-width: $desktops-lower-breakpoint) {
+      font-size: 48px;
+      line-height: 62px;
+    }
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      font-size: 32px;
+      line-height: 44px;
+    }
+  }
+}

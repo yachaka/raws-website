@@ -1,0 +1,555 @@
+
+@import "../../styles/vars.scss";
+
+$margin-right-of-logo: 30px;
+$logo-size: 100px;
+$oval-backgd-width: 1259px;
+
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#heroHeaderOvalBckgd {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: ($oval-backgd-width / 2 * -1) + 50; // 50 to move the shadow more towards the text
+}
+
+#heroHeader {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  margin-left: -($logo-size + $margin-right-of-logo / 2);
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    float: none;
+    margin-left: ($logo-size / 2 * -1);
+  }
+}
+
+#heroLogo {
+  display: inline-block;
+  float: left;
+  margin-right: 30px;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    float: none;
+    margin-right: 0px;
+  }
+}
+
+#shortDesc {
+  font-family: 'Recoleta Bold';
+  letter-spacing: 0.5px;
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    display: none;
+  }
+}
+
+#pill1 {
+  margin-right: 15px;
+}
+
+#heroHeaderRight {
+  overflow: hidden;
+  padding-top: 10px;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    padding-top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.intro {
+  text-align: center;
+  font-size: 26px;
+  line-height: 40px;
+  max-width: 980px;
+
+  margin: auto;
+  padding-top: 180px;
+  padding-bottom: 110px;
+  opacity: .9;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    font-size: 22px;
+    line-height: 34px;
+    margin: 0 24px;
+  }
+}
+
+
+
+
+
+
+.videosExtracts {
+  padding: 0 45px;
+  padding-top: 110px;
+  padding-bottom: 150px;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  h1 {
+    margin-bottom: 70px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      // margin-bottom: 40px;
+    }
+  }
+
+
+  #mainExtract {
+    margin-bottom: 70px;
+    overflow: auto;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      margin: 0 -24px;
+    }
+
+    #mainExtractVideo {
+      width: 66%;
+      background-color: #000;
+      display: block;
+      margin-right: 40px;
+      float: left;
+      height: 500px;
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        height: 220px;
+        width: 100%;
+        float: none;
+        margin-bottom: 24px;
+        margin-right: 0;
+      }
+    }
+
+    #mainExtractDesc {
+      font-size: 26px;
+      line-height: 40px;
+      opacity: .8;
+
+      @media screen and (min-width: $desktops-lower-breakpoint) {
+        font-size: 30px;
+      }
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        font-size: 20px;
+        line-height: 26px;
+        padding: 12px 24px 24px 24px;
+        margin-bottom: 70px;
+      }
+    }
+  }
+
+  #secondaryExtracts {
+    display: flex;
+    flex-direction: row;
+    margin: 0 -35px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      flex-direction: column;
+      margin: -30px 0;
+    }
+
+
+    .secondaryExtract {
+      margin: 0 35px;
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        margin: 30px 0;
+      }
+
+      .secondaryExtractVideo {
+        width: 300px;
+        height: 190px;
+        float: left;
+        background-color: #000;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          width: 100%;
+          height: 200px;
+          float: none;
+          margin-bottom: 24px;
+        }
+      }
+
+
+      .secondaryExtractInfos {
+        overflow: hidden;
+        font-size: 22px;
+        line-height: 1.5;
+        opacity: .7;
+        margin-left: 30px;
+
+        @media screen and (min-width: $desktops-lower-breakpoint) {
+          font-size: 26px;
+        }
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          font-size: 18px;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.musicalVideo {
+  margin-right: 30px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  overflow-x: hidden;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    margin-right: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  #musicalVideoImage {
+    width: 65%;
+    margin-right: 70px;
+    float: left;
+    position: relative;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      width: 120%;
+      float: none;
+      margin-bottom: 70px;
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+
+    #textWithGradient {
+      position: absolute;
+      bottom: -2px;
+      left: -2px;
+      z-index: 2;
+      width: 90%;
+    }
+  }
+
+  h1 {
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      margin-bottom: 70px;
+    }
+  }
+
+  p {
+    font-size: 26px;
+    line-height: 40px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  #musicalVideoInfos {
+    overflow: hidden;
+
+    p {
+      opacity: .7;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        margin-bottom: 70px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.knowHow {
+  margin: 0 45px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    margin: 0 24px
+  }
+
+  h1 {
+    margin-bottom: 115px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      margin-bottom: 70px;
+    }
+  }
+
+  #stuffUsed {
+    width: 600px;
+    margin-top: 740px;
+    margin-left: 50px;
+    font-size: 26px;
+    line-height: 40px;
+    opacity: .8;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      margin-top: 70px;
+      margin-left: 0;
+      width: auto;
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  #knowHowBoxes {
+    position: relative;
+    overflow: auto;
+  }
+
+  .knowHowBox {
+    position: absolute;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      position: static;
+      margin-bottom: 30px;
+    }
+
+    .knowHowBoxInner {
+      border-radius: 8px;
+      background-color: #202020;
+      width: 270px;
+      height: 270px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        width: 240px;
+        margin: auto;
+      }
+    }
+
+    span.infoBubble {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      right: 12px;
+      top: 12px;
+      background-color: rgba(255, 255, 255, .5);
+      color: #333;
+    }
+
+    svg {
+      height: 130px;
+      fill: #bbb;
+    }
+  }
+
+  .knowHowBox#oldCam {}
+  .knowHowBox#microphone {
+    left: 460px;
+  }
+  .knowHowBox#movieCut {
+    top: 330px;
+    left: 310px;
+  }
+
+  .knowHowBox#colorPalette {
+    top: 370px;
+    left: 900px;
+  }
+
+  .knowHowBox#audiograph {
+    top: 700px;
+    left: 810px;
+  }
+
+}
+
+
+
+
+
+
+
+.enterprise {
+  padding: 0 45px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  h1 {
+    margin-bottom: 70px;
+  }
+
+  #enterpriseFocusP {
+    opacity: .8;
+    max-width: 1000px;
+    width: 80%;
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      font-size: 24px;
+      line-height: 40px;
+      width: auto;
+    }
+
+  }
+
+  #enterpriseSmallP {
+    opacity: .7;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 70px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}
+
+
+
+
+
+.aboutUs {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 300px;
+
+  h1 {
+    margin-bottom: 115px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      margin-bottom: 70px;
+    }
+  }
+
+  #aboutUs_Us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      flex-direction: column;
+      margin: -70px 0;
+    }
+
+
+    .person {
+      margin: 0 55px;
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        margin: 70px 0;
+      }
+
+
+      h3 {
+        font-size: 36px;
+        line-height: 50px;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          font-size: 30px;
+          line-height: 38px;
+        }
+      }
+
+      .image {
+        display: inline-block;
+        margin-bottom: 40px;
+        background-color: #7A6245;
+        border-radius: 60px;
+        overflow: hidden;
+      }
+
+      p {
+        font-size: 30px;
+        line-height: 40px;
+        opacity: .7;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+footer {
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+
+  ul {
+    margin: auto;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: $beige;
+        text-decoration: none;
+      }
+
+      &.separator {
+        margin: 0 20px;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          margin: 0 12px;
+        }
+      }
+    }
+  }
+}
