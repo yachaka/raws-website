@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from 'react';
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import s from "./Contact.scss";
+import s from "./Contact.module.scss";
 import Btn from "../../components/Btn/Btn";
 
 const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];

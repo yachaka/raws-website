@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import pillStyles from "./Pill.scss";
+import pillStyles from "./Pill.module.scss";
 
 export default function FacebookPill(props) {
   return (

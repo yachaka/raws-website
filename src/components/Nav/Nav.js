@@ -3,7 +3,7 @@ import { useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import burgerMenuIcon from "../../assets/images/icons/burger.svg";
-import s from "./Nav.scss";
+import s from "./Nav.module.scss";
 
 const links = [
   { elId: 'intro', text: 'Raws' },  

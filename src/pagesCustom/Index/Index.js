@@ -10,7 +10,7 @@ import Nav from "../../components/Nav/Nav";
 import FacebookPill from '../../components/SocialPills/FacebookPill';
 import InstagramPill from '../../components/SocialPills/InstagramPill';
 
-import s from './Index.scss';
+import s from './Index.module.scss';
 
 const IndexPage = () => {
   const images = useStaticQuery(graphql`

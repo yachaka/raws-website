@@ -1,6 +1,7 @@
 
 @import "../../styles/vars.scss";
 
+
 nav {
   z-index: 101;
   position: fixed;
@@ -28,7 +29,7 @@ nav {
     float: right;
     margin-top: 4px;
 
-    @media screen and (max-width: $phone-upper-breakpoint) {
+    @media screen and (max-width: 800px) {
       display: block;
     }
 
@@ -52,7 +53,7 @@ nav {
 
   ul#desktopLinks {
 
-    @media screen and (max-width: $phone-upper-breakpoint) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
 
@@ -174,6 +175,5 @@ nav.visible {
       display: inline-block;
       margin: 12px 0;
     }
-
   }
 }
