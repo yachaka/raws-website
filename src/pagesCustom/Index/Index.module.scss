@@ -349,20 +349,54 @@ $oval-backgd-width: 1259px;
   }
 
   .knowHowBox {
+    perspective: 1000px;
+
+    &:hover, &.clicked {
+      .knowHowBoxInner {
+        transform: rotateY(180deg);
+      }
+    }
+
     @media screen and (max-width: $phone-upper-breakpoint) {
       position: static;
       margin-bottom: 30px;
     }
 
     .knowHowBoxInner {
-      border-radius: 8px;
-      background-color: #202020;
+      transition: 500ms;
+      transform-style: preserve-3d;
       width: 270px;
       height: 270px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       position: relative;
+
+      .front, .back {
+        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        backface-visibility: hidden;
+      }
+
+      .front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #202020;
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+
+      /* back, initially hidden pane */
+      .back {
+        background-color: #000;
+        transform: rotateY(180deg);
+        padding: 30px;
+        font-size: 20px;
+        line-height: 30px;
+      }
 
       @media screen and (max-width: $phone-upper-breakpoint) {
         width: 240px;
@@ -385,8 +419,15 @@ $oval-backgd-width: 1259px;
     }
 
     svg {
-      height: 130px;
-      fill: #bbb;
+      height: 80px;
+      fill: $beige;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-family: 'Recoleta Bold';
+      letter-spacing: 0.5px;
+      font-size: 22px;
     }
   }
 }
