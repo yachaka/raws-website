@@ -26,7 +26,8 @@ $oval-backgd-width: 1259px;
 
   @media screen and (max-width: $phone-upper-breakpoint) {
     float: none;
-    margin-left: ($logo-size / 2 * -1);
+    margin-left: 0;
+    transform: translateX(-50%);
   }
 }
 
@@ -37,7 +38,9 @@ $oval-backgd-width: 1259px;
 
   @media screen and (max-width: $phone-upper-breakpoint) {
     float: none;
-    margin-right: 0px;
+    display: block;
+    margin: auto;
+    width: 100px;
   }
 }
 
@@ -53,7 +56,7 @@ $oval-backgd-width: 1259px;
   }
 }
 
-#pill1 {
+.pillMarged {
   margin-right: 15px;
 }
 
@@ -313,9 +316,8 @@ $oval-backgd-width: 1259px;
   }
 
   #stuffUsed {
-    width: 600px;
-    margin-top: 740px;
-    margin-left: 50px;
+    max-width: 980px;
+    margin: auto;
     font-size: 26px;
     line-height: 40px;
     opacity: .8;
@@ -329,14 +331,24 @@ $oval-backgd-width: 1259px;
     }
   }
 
-  #knowHowBoxes {
-    position: relative;
-    overflow: auto;
+  #knowHowBoxes {}
+
+  .knowHowBoxRow {
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+  .knowHowBoxRow.second {
+    justify-content: space-around;
   }
 
   .knowHowBox {
-    position: absolute;
-
     @media screen and (max-width: $phone-upper-breakpoint) {
       position: static;
       margin-bottom: 30px;
@@ -377,26 +389,6 @@ $oval-backgd-width: 1259px;
       fill: #bbb;
     }
   }
-
-  .knowHowBox#oldCam {}
-  .knowHowBox#microphone {
-    left: 460px;
-  }
-  .knowHowBox#movieCut {
-    top: 330px;
-    left: 310px;
-  }
-
-  .knowHowBox#colorPalette {
-    top: 370px;
-    left: 900px;
-  }
-
-  .knowHowBox#audiograph {
-    top: 700px;
-    left: 810px;
-  }
-
 }
 
 

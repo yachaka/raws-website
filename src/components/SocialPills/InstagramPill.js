@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import pillStyles from "./Pill.module.scss";
 import instagramIcon from '../../assets/images/icons/instagram.svg';
 
-export default function InstagramPill(props) {
+export default function InstagramPill({ className, ...others }) {
   return (
-    <a href="" className={pillStyles.pill} {...props}>
-      <img src={instagramIcon} alt="RAWS Instagram" />
+    <a href="" className={`${className} ${pillStyles.pill}`} {...others}>
+      <img src={instagramIcon} alt="RAWS sur Instagram" />
     </a>
   );
 }
