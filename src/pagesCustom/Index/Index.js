@@ -167,7 +167,7 @@ const IndexPage = () => {
           <div id={s.mainExtractVideo} />
 
           <p id={s.mainExtractDesc}>
-            Tourné à Grives-en-Maux, pour Ben Calza.
+            Tourné à VAUDREUILLE, pour Ben Calza.
             <br /><br />
             Choix du lieux par l’artiste.
             <br /><br />
