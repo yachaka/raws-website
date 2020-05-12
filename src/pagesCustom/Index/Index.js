@@ -154,7 +154,7 @@ const IndexPage = () => {
           <br /><br />
           Afin de correspondre au mieux à leurs attentes et à leurs univers, nous invitons les artistes à participer au processus créatif et au choix du lieu de tournage.
           <br /><br />
-          Nous filmons ce que nous aimons, quelle que soit la notoriété des artistes.
+          Nous filmons ce que nous aimons, quelle que soit la notoriété des artistes. :)
         </p>
       </div>
 
