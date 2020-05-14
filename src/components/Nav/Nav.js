@@ -9,7 +9,7 @@ const links = [
   { elId: 'intro', text: 'Raws' },  
   { elId: 'extraits', text: 'Vidéos' },  
   { elId: 'clip-musical', text: 'Votre session' },  
-  { elId: 'savoir-faire', text: 'Prestation' },  
+  { elId: 'savoir-faire', text: 'Prestations' },  
   { elId: 'entreprises', text: 'Entreprises' },  
   { elId: 'a-propos', text: 'À propos' },
 ];
