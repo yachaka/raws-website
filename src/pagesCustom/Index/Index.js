@@ -160,7 +160,7 @@ const IndexPage = () => {
 
 
       <div id="extraits" className={`${s.videosExtracts} container`}>
-        <h1>Extraits de nos productions</h1>
+        <h1>Nos Sessions</h1>
 
 
         <div id={s.mainExtract}>
@@ -214,7 +214,7 @@ const IndexPage = () => {
           <div id={s.textWithGradient}>
             <Img
               fluid={images.musicalClipTextGradient.childImageSharp.fluid}
-              alt="Nous réalisons votre clip musical"
+              alt="Captation suivant vos envies"
             />
           </div>
           <Img
@@ -223,15 +223,15 @@ const IndexPage = () => {
         </div>
 
         <div id={s.musicalVideoInfos}>
-          <h1>Nous pouvons réaliser votre clip musical.</h1>
+          <h1>Personnalisez votre session.</h1>
 
           <p>
             Afin de correspondre au mieux à leurs attentes et à leurs univers, nous invitons les artistes à participer au processus créatif et au choix du lieu de tournage.
             <br /><br />
-            Nous réalisons aussi des services post-production.
+            
             <br /><br />
-            Tarification indicative : 1 000 euros pour un clip musical
-            de 4 mn.
+          
+            
           </p>
 
           <Btn Component={Link} to="/contact">
