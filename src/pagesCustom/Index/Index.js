@@ -160,7 +160,7 @@ const IndexPage = () => {
 
 
       <div id="extraits" className={`${s.videosExtracts} container`}>
-        <h1>Nos Sessions</h1>
+        <h1>Nos Réalisations</h1>
 
 
         <div id={s.mainExtract}>
@@ -247,8 +247,8 @@ const IndexPage = () => {
 
       <div id="savoir-faire" className={`${s.knowHow} container`}>
         <h1>
-          Nous mettons à disposition
-          <br/>notre savoir-faire Audiovisuel.
+          Détail de nos prestations
+          <br/>
         </h1>
 
         <div id={s.knowHowBoxes}>
