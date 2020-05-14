@@ -368,17 +368,16 @@ const IndexPage = () => {
 
 
       <div id="entreprises" className={s.enterprise}>
-        <h1>Entreprise ? Nous vous aidons à capturer vos évènements.</h1>
+        <h1>Captations pour entreprises.</h1>
 
         <p id={s.enterpriseFocusP} className="recoleta">
-          Pour un séminaire, une soirée d’entreprise, ou une conférence, nous venons sur place et réalisons la prise vidéo et son.
+          Dans la limite de nos moyens, nous pouvons réaliser des vidéos présentations d'entreprises, des spots publicitaires, pour médias sociaux etc...
           <br /><br />
-          À votre demande, nous montons une vidéo finale et ajustons la colorimétrie.
+          
         </p>
 
         <p id={s.enterpriseSmallP}>
-          Tarification indicative : 1000 euros à 3000 euros pour une prise vidéo + montage.
-          <br/>Tarification précise selon conditions de travail.
+
         </p>
 
         <Btn Component={Link} to="/contact">
