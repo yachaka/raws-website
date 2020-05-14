@@ -405,9 +405,9 @@ const IndexPage = () => {
             <h3 className="recoleta">Ben</h3>
 
             <p className={s.desc}>
-              Monteur/cadreur,
-              <br/>vivant à Revel,
-              <br/>aime la nature
+              Ingé son,
+              <br/>Post production,
+              <br/>
             </p>
           </div>
 
@@ -422,9 +422,9 @@ const IndexPage = () => {
             <h3 className="recoleta">Rémi</h3>
 
             <p className={s.desc}>
-              Monteur/cadreur,
-              <br/>vivant à Revel,
-              <br/>aime la nature
+              Cameraman,
+              <br/>Post production,
+              <br/>
             </p>
           </div>
         </div>
