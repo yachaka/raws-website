@@ -7,9 +7,9 @@ import s from "./Nav.module.scss";
 
 const links = [
   { elId: 'intro', text: 'Raws' },  
-  { elId: 'extraits', text: 'Extraits' },  
-  { elId: 'clip-musical', text: 'Votre clip musical' },  
-  { elId: 'savoir-faire', text: 'Savoir-faire' },  
+  { elId: 'extraits', text: 'Vidéos' },  
+  { elId: 'clip-musical', text: 'Votre session' },  
+  { elId: 'savoir-faire', text: 'Prestation' },  
   { elId: 'entreprises', text: 'Entreprises' },  
   { elId: 'a-propos', text: 'À propos' },
 ];
