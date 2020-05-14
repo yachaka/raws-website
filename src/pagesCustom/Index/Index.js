@@ -404,7 +404,7 @@ const IndexPage = () => {
             <h3 className="recoleta">Ben</h3>
 
             <p className={s.desc}>
-              Ingé son,
+              Ingénieur son,
               <br/>Post production
               <br/>
             </p>
