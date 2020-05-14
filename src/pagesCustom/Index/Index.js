@@ -406,7 +406,7 @@ const IndexPage = () => {
 
             <p className={s.desc}>
               Ingé son,
-              <br/>Post production,
+              <br/>Post production
               <br/>
             </p>
           </div>
@@ -423,7 +423,7 @@ const IndexPage = () => {
 
             <p className={s.desc}>
               Cameraman,
-              <br/>Post production,
+              <br/>Post production
               <br/>
             </p>
           </div>
