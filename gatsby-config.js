@@ -5,15 +5,10 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-sass`,
-      // options: {
-      //   cssLoaderOptions: {
-      //     modules: true,
-      //   },
-      // },
-    },
+    `gatsby-plugin-sass`,
+    
     `gatsby-plugin-react-helmet`,
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,8 +16,43 @@ module.exports = {
         path: `${__dirname}/src`,
       },
     },
+
     `gatsby-transformer-sharp`,
+
     `gatsby-plugin-sharp`,
+
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/assets/images/favicon.jpg",
+
+        // WebApp Manifest Configuration
+        // appName: null, // Inferred with your package.json
+        // appDescription: null,
+        // developerName: null,
+        // developerURL: null,
+        // dir: 'auto',
+        // lang: 'en-US',
+        // background: '#fff',
+        // theme_color: '#fff',
+        // display: 'standalone',
+        // orientation: 'any',
+        // start_url: '/?homescreen=1',
+        // version: '1.0',
+
+        icons: {
+          android: false,
+          appleIcon: false,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: false,
+          yandex: false,
+          windows: false
+        }
+      }
+    },
+
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
