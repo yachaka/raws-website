@@ -2,6 +2,7 @@ import React, { useCallback, useState, useEffect } from 'react';
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+import SEO from '../../components/SEO';
 import s from "./Contact.module.scss";
 import Btn from "../../components/Btn/Btn";
 
@@ -96,6 +97,10 @@ export default function Contact({ }) {
 
   return (
     <div id={s.contactPage}>
+      <SEO
+        title="Contact - RAWS Sessions"
+      />
+
       <Link id={s.backBtn} to="/">
         ← Retour à l'accueil
       </Link>
