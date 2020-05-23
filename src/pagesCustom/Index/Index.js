@@ -135,7 +135,7 @@ const IndexPage = () => {
 
       <div id="intro" className={s.intro}>
         <p>
-          <span className="recoleta">Raws</span> est une boîte de production spécialisée dans la réalisation de vidéos musicales lives, acoustiques et intimistes, le plus souvent tournées en extérieur ou dans des lieux insolites.
+          <span className="recoleta">Raws</span> est une boîte de production audiovisuelle spécialisée dans la réalisation de vidéos musicales lives, acoustiques et intimistes, le plus souvent tournées en extérieur ou dans des lieux insolites.
           <br /><br />
           Afin de correspondre au mieux à leurs attentes et à leurs univers, nous invitons les artistes à participer au processus créatif et au choix du lieu de tournage.
           <br /><br />
