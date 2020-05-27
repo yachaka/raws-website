@@ -63,6 +63,7 @@ $oval-backgd-width: 1259px;
 #heroHeaderRight {
   overflow: hidden;
   padding-top: 10px;
+  white-space: nowrap;
 
   @media screen and (max-width: $phone-upper-breakpoint) {
     padding-top: 20px;
@@ -130,28 +131,44 @@ $oval-backgd-width: 1259px;
 
     #mainExtractVideo {
       width: 66%;
-      background-color: #000;
       display: block;
       margin-right: 40px;
       float: left;
-      height: 500px;
+
+      iframe {
+        width: 100%;
+        height: 400px;
+      }
 
       @media screen and (max-width: $phone-upper-breakpoint) {
-        height: 220px;
         width: 100%;
         float: none;
         margin-bottom: 24px;
         margin-right: 0;
+
+        iframe {
+          height: 300px;
+        }
       }
     }
 
     #mainExtractDesc {
+      overflow: hidden;
       font-size: 26px;
       line-height: 40px;
       opacity: .8;
 
+      #mainExtractTitle {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
       @media screen and (min-width: $desktops-lower-breakpoint) {
         font-size: 30px;
+
+        #mainExtractTitle {
+          font-size: 36px;
+        }
       }
 
       @media screen and (max-width: $phone-upper-breakpoint) {
@@ -159,6 +176,10 @@ $oval-backgd-width: 1259px;
         line-height: 26px;
         padding: 12px 24px 24px 24px;
         margin-bottom: 70px;
+
+        #mainExtractTitle {
+          font-size: 26px;
+        }
       }
     }
   }
@@ -239,7 +260,7 @@ $oval-backgd-width: 1259px;
   }
 
   #musicalVideoImage {
-    width: 65%;
+    width: 40%;
     margin-right: 70px;
     float: left;
     position: relative;
@@ -254,10 +275,10 @@ $oval-backgd-width: 1259px;
 
     #textWithGradient {
       position: absolute;
-      bottom: -2px;
+      top: -2px;
       left: -2px;
       z-index: 2;
-      width: 90%;
+      width: 100%;
     }
   }
 
@@ -318,6 +339,7 @@ $oval-backgd-width: 1259px;
   #stuffUsed {
     max-width: 980px;
     margin: auto;
+    margin-left: 60px;
     font-size: 26px;
     line-height: 40px;
     opacity: .8;
@@ -328,6 +350,21 @@ $oval-backgd-width: 1259px;
       width: auto;
       font-size: 22px;
       line-height: 30px;
+    }
+
+    #stuffUsedTitle {
+      font-size: 32px;
+      line-height: 42px;
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        font-size: 26px;
+        line-height: 30px;
+      }
+    }
+
+    strong {
+      font-weight: bold;
+      letter-spacing: 0.5px;
     }
   }
 
@@ -349,74 +386,21 @@ $oval-backgd-width: 1259px;
   }
 
   .knowHowBox {
-    perspective: 1000px;
-
-    &:hover, &.clicked {
-      .knowHowBoxInner {
-        transform: rotateY(180deg);
-      }
-    }
-
     @media screen and (max-width: $phone-upper-breakpoint) {
       position: static;
+      width: 240px;
+      margin: auto;
       margin-bottom: 30px;
     }
 
-    .knowHowBoxInner {
-      transition: 500ms;
-      transform-style: preserve-3d;
-      width: 270px;
-      height: 270px;
-      position: relative;
-
-      .front, .back {
-        border-radius: 8px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        backface-visibility: hidden;
-      }
-
-      .front {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #202020;
-        z-index: 2;
-        transform: rotateY(0deg);
-      }
-
-      /* back, initially hidden pane */
-      .back {
-        background-color: #000;
-        transform: rotateY(180deg);
-        padding: 30px;
-        font-size: 20px;
-        line-height: 30px;
-      }
-
-      @media screen and (max-width: $phone-upper-breakpoint) {
-        width: 240px;
-        margin: auto;
-      }
-    }
-
-    span.infoBubble {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      border-radius: 30px;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: center;
-      right: 12px;
-      top: 12px;
-      background-color: rgba(255, 255, 255, .5);
-      color: #333;
-    }
+    width: 270px;
+    height: 270px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #202020;
 
     svg {
       height: 80px;

@@ -53,7 +53,9 @@ export default function Contact({ }) {
     };
   }
 
-  function onSendClick() {
+  function onSubmitForm(e) {
+    e.preventDefault();
+
     const errors = {};
     fields.forEach(fieldName => {
       if (!formData[fieldName]) {
@@ -64,14 +66,26 @@ export default function Contact({ }) {
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
     } else {
-      // TODO: Send request to netlify
+      const formEl = document.getElementById('contact-form');
+      const data = new URLSearchParams(new FormData(formEl));
+
       setSentMsgState('loading');
-      setTimeout(() => setSentMsgState(true), 2000);
-      setFormData({});
-      setFormErrors({});
-      setHasSentMessageDataSerialized(JSON.stringify({
-        sentAt: (new Date()).getTime(),
-      }));
+      fetch(
+        formEl.getAttribute('action'),
+        {
+          method: 'post',
+          body: data,
+        }
+      ).then(() => {
+        setSentMsgState(true);
+        setFormData({});
+        setFormErrors({});
+        setHasSentMessageDataSerialized(JSON.stringify({
+          sentAt: (new Date()).getTime(),
+        }));
+      }).catch(e => {
+        alert('Une erreur est survenue lors de l\'envoi du message de contact. S\'il vous plait, contactez-nous via nos réseaux sociaux.');
+      });
     }
   }
 
@@ -122,58 +136,74 @@ export default function Contact({ }) {
         </p>
       )}
 
-      <div className={s.row}>
-        <div className={`${s.col} ${errorClass('prenom')}`}>
-          <label>Prénom</label>
-          <input
-            type="text"
-            name="prenom"
-            onChange={onChangeFactory('prenom')}
-          />
+      <form
+        id="contact-form"
+        data-netlify="true"
+        name="contact"
+        method="POST"
+        action="/contact"
+        onSubmit={onSubmitForm}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
+        <div className={s.row}>
+          <div className={`${s.col} ${errorClass('prenom')}`}>
+            <label>Prénom</label>
+            <input
+              type="text"
+              name="prenom"
+              onChange={onChangeFactory('prenom')}
+            />
+          </div>
+
+          <div className={`${s.col} ${errorClass('nom')}`}>
+            <label>Nom</label>
+            <input type="text" name="nom" onChange={onChangeFactory('nom')}  />
+          </div>
         </div>
 
-        <div className={`${s.col} ${errorClass('nom')}`}>
-          <label>Nom</label>
-          <input type="text" name="nom" onChange={onChangeFactory('nom')}  />
-        </div>
-      </div>
+        <div className={s.row}>
+          <div className={`${s.col} ${errorClass('email')}`}>
+            <label>Courriel</label>
+            <input
+              type="text"
+              name="email"
+              placeholder="vous@votremail.com"
+              onChange={onChangeFactory('email')}
+            />
+          </div>
 
-      <div className={s.row}>
-        <div className={`${s.col} ${errorClass('email')}`}>
-          <label>Courriel</label>
-          <input
-            type="text"
-            name="email"
-            placeholder="vous@votremail.com"
-            onChange={onChangeFactory('email')}
-          />
+          <div className={`${s.col} ${errorClass('telephone')}`}>
+            <label>Téléphone</label>
+            <input
+              type="text"
+              name="telephone"
+              placeholder="06 11 22 33 44"
+              onChange={onChangeFactory('telephone')}
+            />
+          </div>
         </div>
 
-        <div className={`${s.col} ${errorClass('telephone')}`}>
-          <label>Téléphone</label>
-          <input
-            type="text"
-            name="telephone"
-            placeholder="06 11 22 33 44"
-            onChange={onChangeFactory('telephone')}
-          />
+        <div className={s.row}>
+          <div className={`${s.col} ${errorClass('message')}`}>
+            <textarea
+              name="message"
+              placeholder="Votre message... Quel projet voulez-vous filmer ?"
+              onChange={onChangeFactory('message')} 
+            ></textarea>
+          </div>
         </div>
-      </div>
 
-      <div className={s.row}>
-        <div className={`${s.col} ${errorClass('message')}`}>
-          <textarea
-            placeholder="Votre message... Quel projet voulez-vous filmer ?"
-            onChange={onChangeFactory('message')} 
-          ></textarea>
-        </div>
-      </div>
-
-      <Btn onClick={onSendClick} className={sendBtnClass()}>
-        {sentMsgState === false && 'Envoyer'}
-        {sentMsgState === 'loading' && 'Envoi en cours...'}
-        {sentMsgState === true && 'Envoyé ✅'}
-      </Btn>
+        <Btn
+          Component={`button`}
+          className={`${s.submit} ${sendBtnClass()}`}
+          type="submit"
+        >
+          {sentMsgState === false && 'Envoyer'}
+          {sentMsgState === 'loading' && 'Envoi en cours...'}
+          {sentMsgState === true && 'Envoyé ✅'}
+        </Btn>
+      </form>
     </div>
   );
 }

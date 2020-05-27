@@ -54,7 +54,6 @@ $red-error: #d23f00;
     margin: 0 -15px;
     margin-bottom: 30px;
     max-width: 700px;
-    width: 100%;
 
     .col {
       flex: 1;
@@ -123,5 +122,9 @@ $red-error: #d23f00;
   .btnLoading {
     color: #999 !important;
     border-color: #999 !important;
+  }
+
+  .submit {
+    background-color: transparent;
   }
 }

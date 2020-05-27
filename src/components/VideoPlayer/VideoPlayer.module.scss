@@ -1,0 +1,46 @@
+
+@import "../../styles/vars.scss";
+
+.player {
+  video {
+    width: 100%;
+  }
+
+  .selectorText {
+    display: inline-block;
+    margin-right: 12px;
+    opacity: .8;
+    color: $beige;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .selector {
+    display: inline-block;
+    margin-top: 20px;
+
+    .quality {
+      cursor: pointer;
+      border: 1px solid rgba($beige, .5);
+
+      color: rgba($beige, .7);
+      background-color: #101010;
+      padding: 12px 16px;
+      display: inline-block;
+
+      &.selected {
+        background-color: darken($marron, 25%);
+        // border: 1px solid rgba($beige, 1);
+        // color: rgba($beige, 1);
+      }
+
+      &:first-child {
+        border-radius: 6px 0 0 6px;
+      }
+
+      &:last-child {
+        border-radius: 0 6px 6px 0;
+      }
+    }
+  }
+}
