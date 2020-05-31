@@ -316,14 +316,9 @@ const IndexPage = () => {
       <div id="entreprises" className={s.enterprise}>
         <h1>Captations pour entreprises.</h1>
 
-        <p id={s.enterpriseFocusP} className="recoleta">
-          Dans la limite de nos moyens, nous pouvons réaliser des vidéos présentations d'entreprises, des spots publicitaires, pour médias sociaux etc...
-          <br /><br />
-          
-        </p>
-
         <p id={s.enterpriseSmallP}>
-
+          Nous pouvons réaliser des vidéos présentations d'entreprises, des spots publicitaires, pour médias sociaux, etc.
+          <br/>Contactez-nous pour plus d'informations :
         </p>
 
         <Btn Component={Link} to="/contact">

@@ -1,2 +1,6 @@
 
 - diaporama photos
+- page "legals"
+- page "credits"
+- lien contact dans le footer
+- faire fonctionner le form de contact
