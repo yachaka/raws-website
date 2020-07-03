@@ -207,6 +207,11 @@ $oval-backgd-width: 1259px;
         height: 190px;
         float: left;
         background-color: #000;
+        margin-right: 30px;
+
+        iframe {
+          height: 100%;
+        }
 
         @media screen and (max-width: $phone-upper-breakpoint) {
           width: 100%;
@@ -214,6 +219,11 @@ $oval-backgd-width: 1259px;
           float: none;
           margin-bottom: 24px;
         }
+      }
+
+      .secondaryExtractVideoTitle {
+        font-size: 26px;
+        font-weight: bold;
       }
 
 
@@ -260,10 +270,14 @@ $oval-backgd-width: 1259px;
   }
 
   #musicalVideoImage {
-    width: 40%;
+    width: 60%;
     margin-right: 70px;
     float: left;
     position: relative;
+
+    @media screen and (max-width: 900px) {
+      width: 50%;
+    }
 
     @media screen and (max-width: $phone-upper-breakpoint) {
       width: 120%;

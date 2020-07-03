@@ -44,7 +44,7 @@ const IndexPage = () => {
         }
       }
 
-      musicalClip: file(relativePath: { eq: "assets/images/ben-banjo.jpg" }) {
+      musicalClip: file(relativePath: { eq: "assets/images/pierre.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1600, quality: 90) {
             ...GatsbyImageSharpFluid
@@ -158,7 +158,7 @@ const IndexPage = () => {
           <div id={s.mainExtractVideo}>
             <iframe
               width="100%"
-              src="https://www.youtube.com/embed/Wt5O_3Ap9TQ"
+              src="https://www.youtube.com/embed/i7bljfLBmW0"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -174,14 +174,32 @@ const IndexPage = () => {
           />*/}
 
           <p id={s.mainExtractDesc}>
-            <span id={s.mainExtractTitle}>Augusta - The Birds</span>
-            <br /><br />
-            Tourné dans la Montagne Noire
+            <span id={s.mainExtractTitle}>David William - Hold Me Down</span>
           </p>
         </div>
 
-        {/*<div id={s.secondaryExtracts}>
+        <div id={s.secondaryExtracts}>
           <div className={s.secondaryExtract}>
+            <div className={s.secondaryExtractVideo}>
+              <iframe
+                width="100%"
+                src="https://www.youtube.com/embed/Wt5O_3Ap9TQ"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div className={s.secondaryExtractInfos}>
+              <p>
+                <span className={s.secondaryExtractVideoTitle}>Augusta - The Birds</span>
+                <br/>
+                Tourné dans la Montagne Noire
+              </p>
+            </div>
+          </div>
+
+          {/*<div className={s.secondaryExtract}>
             <div className={s.secondaryExtractVideo} />
 
             <div className={s.secondaryExtractInfos}>
@@ -192,21 +210,8 @@ const IndexPage = () => {
                 Le 20/03/2019
               </p>
             </div>
-          </div>
-
-          <div className={s.secondaryExtract}>
-            <div className={s.secondaryExtractVideo} />
-
-            <div className={s.secondaryExtractInfos}>
-              <p>
-                <span className={s.secondaryExtractVideoTitle}>Makeba - Jain</span>
-                <br/>
-                Tourné à Toulouse
-                Le 20/03/2019
-              </p>
-            </div>
-          </div>
-        </div>*/}
+          </div>*/}
+        </div>
       </div>
 
 
