@@ -176,7 +176,7 @@ const IndexPage = () => {
           <p id={s.mainExtractDesc}>
             <span id={s.mainExtractTitle}>David William - Hold Me Down</span>
             <br/>
-             Tourné au Laudot, dans la montagne noire
+             Tourné au Laudot, dans la Montagne Noire
           </p>
         </div>
 
