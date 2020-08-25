@@ -193,6 +193,8 @@ const IndexPage = () => {
             <div className={s.secondaryExtractInfos}>
               <p>
                 <span className={s.secondaryExtractVideoTitle}>David William - Hold Me Down</span>
+                <br />
+                Tourné au Laudot dans la Montagne Noire
               </p>
             </div>
           </div>
@@ -212,7 +214,7 @@ const IndexPage = () => {
               <p>
                 <span className={s.secondaryExtractVideoTitle}>Augusta - The Birds</span>
                 <br />
-                Tourné dans la Montagne Noire
+                Tourné au lac de Laprades dans la Montagne Noire
               </p>
             </div>
           </div>
