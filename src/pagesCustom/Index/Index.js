@@ -183,7 +183,7 @@ const IndexPage = () => {
             <div className={s.secondaryExtractVideo}>
               <iframe
                 width="100%"
-                src="https://www.youtube.com/embed/Wt5O_3Ap9TQ"
+                src="https://www.youtube.com/embed/i7bljfLBmW0"
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 allowfullscreen
