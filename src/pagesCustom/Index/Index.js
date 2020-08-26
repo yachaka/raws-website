@@ -175,6 +175,8 @@ const IndexPage = () => {
 
           <p id={s.mainExtractDesc}>
             <span id={s.mainExtractTitle}>FLO - Comme Je Suis</span>
+            <br />
+            Tourné sur une ancienne voie ferrée
           </p>
         </div>
 
