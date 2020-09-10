@@ -176,7 +176,7 @@ const IndexPage = () => {
           <p id={s.mainExtractDesc}>
             <span id={s.mainExtractTitle}>FLO - Comme Je Suis</span>
             <br />
-            Tourné sur une ancienne voie ferrée
+            
           </p>
         </div>
 
@@ -196,7 +196,7 @@ const IndexPage = () => {
               <p>
                 <span className={s.secondaryExtractVideoTitle}>David William - Hold Me Down</span>
                 <br />
-                Tourné au Laudot dans la Montagne Noire
+               
               </p>
             </div>
           </div>
@@ -216,7 +216,7 @@ const IndexPage = () => {
               <p>
                 <span className={s.secondaryExtractVideoTitle}>Augusta - The Birds</span>
                 <br />
-                Tourné au lac de Laprades dans la Montagne Noire
+                
               </p>
             </div>
           </div>
