@@ -184,10 +184,10 @@ $oval-backgd-width: 1259px;
     }
   }
 
-  #secondaryExtracts {
+  .secondaryExtracts {
     display: flex;
     flex-direction: row;
-    margin: 0 -35px;
+    margin: 0 -35px 50px;
 
     @media screen and (max-width: 1170px) {
       flex-direction: column;
