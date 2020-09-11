@@ -311,13 +311,13 @@ const IndexPage = () => {
             <br/><br/>
             <strong>Caméra :</strong> Panasonic GH5
             <br/><strong>Objectif :</strong> Leica panasonic 18-55m
-            <br/><strong>Moniteur :</strong> Black Magic,
-            <br/><strong>Steady Cam :</strong> Feiyu A1000
+            <br/><strong>Moniteur :</strong> Black Magic
+            <br/><strong>Steady Cam :</strong> Ronin S
             <br/><br/>
-            <strong>Micros :</strong> Zoom H4n Pro, Shure SM58, Audio Technica 2020, Sennheiser ME 2-II, Zoom H2, Shure SM57
+            <strong>Micros :</strong> Zoom H4n Pro, Shure SM58, Audio Technica 2020, Sennheiser ME 2-II, Zoom H2, Shure SM57, AKG C214, Rode NTG4+
             <br/><br/>
             <strong>Mix & Mastering :</strong> Cubase LE Al Elements 9.5
-            <br/><strong>Montage & Etalonnage :</strong> Adobe Première pro 2019
+            <br/><strong>Montage & Etalonnage :</strong> Adobe Première pro 2019 & Da Vinci Résolve
           </p>
         </div>
       </div>
