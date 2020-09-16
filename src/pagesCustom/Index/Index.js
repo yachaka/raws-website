@@ -158,7 +158,7 @@ const IndexPage = () => {
           <div id={s.mainExtractVideo}>
             <iframe
               width="100%"
-              src="https://www.youtube.com/embed/k6MYyJGcLU0"
+              src="https://www.youtube.com/embed/EzPY_Ne0erw"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -174,13 +174,33 @@ const IndexPage = () => {
           />*/}
 
           <p id={s.mainExtractDesc}>
-            <span id={s.mainExtractTitle}>Tindaya - Words We Never Say</span>
+            <span id={s.mainExtractTitle}>Augusta - The Feeling's Gone</span>
             <br />
             {/* Tourné à... (remplacer la ligne complète) */}
           </p>
         </div>
 
         <div className={s.secondaryExtracts}>
+          <div className={s.secondaryExtract}>
+            <div className={s.secondaryExtractVideo}>
+              <iframe
+                width="100%"
+                src="https://www.youtube.com/embed/k6MYyJGcLU0"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div className={s.secondaryExtractInfos}>
+              <p>
+                <span className={s.secondaryExtractVideoTitle}>Tindaya - Words We Never Say</span>
+                <br />
+                {/* Tourné à... (remplacer la ligne complète) */}
+              </p>
+            </div>
+          </div>
+
           <div className={s.secondaryExtract}>
             <div className={s.secondaryExtractVideo}>
               <iframe
@@ -201,6 +221,11 @@ const IndexPage = () => {
             </div>
           </div>
 
+          
+        </div>
+
+
+        <div className={s.secondaryExtracts}>
           <div className={s.secondaryExtract}>
             <div className={s.secondaryExtractVideo}>
               <iframe
@@ -220,10 +245,7 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-        </div>
 
-
-        <div className={s.secondaryExtracts}>
           <div className={s.secondaryExtract}>
             <div className={s.secondaryExtractVideo}>
               <iframe
