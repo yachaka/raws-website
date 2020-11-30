@@ -17,6 +17,45 @@ import TwitterPill from '../../components/SocialPills/TwitterPill';
 
 import s from './Index.module.scss';
 
+const videos = [
+  {
+    url: 'https://www.youtube.com/embed/ISYLWUvP8rk',
+    title: 'StanLei - Bright Blue',
+    desc: '', 
+  },
+  {
+    url: 'https://www.youtube.com/embed/R74q_ITO4XU',
+    title: 'Zitoune - The River (Aurora Cover)',
+    desc: '',
+  },
+  {
+    url: 'https://www.youtube.com/embed/EzPY_Ne0erw',
+    title: 'Augusta - The Feeling\'s Gone',
+    desc: '',
+  },
+  {
+    url: 'https://www.youtube.com/embed/k6MYyJGcLU0',
+    title: 'Tindaya - Words We Never Say',
+    desc: '',
+  },
+  {
+    url: 'https://www.youtube.com/embed/8cUG-oFeTfo',
+    title: 'FLO - Comme Je Suis',
+    desc: 'Tourné sur une ancienne voie ferrée',
+  },
+  {
+    url: 'https://www.youtube.com/embed/i7bljfLBmW0',
+    title: 'David William - Hold Me Down',
+    desc: '',
+  },
+  {
+    url: 'https://www.youtube.com/embed/Wt5O_3Ap9TQ',
+    title: 'Augusta - The Birds',
+    desc: '',
+  },
+
+];
+
 const IndexPage = () => {
   const images = useStaticQuery(graphql`
     query {
@@ -93,6 +132,8 @@ const IndexPage = () => {
   const title = 'RAWS - Production Audiovisuelle';
   const image = 'https://rawssessions.com' + images.heroBackground.childImageSharp.src;
 
+  const mainVideo = videos.shift();
+
   return (
     <>
       <SEO
@@ -158,7 +199,7 @@ const IndexPage = () => {
           <div id={s.mainExtractVideo}>
             <iframe
               width="100%"
-              src="https://www.youtube.com/embed/R74q_ITO4XU"
+              src={mainVideo.url}
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
@@ -174,119 +215,67 @@ const IndexPage = () => {
           />*/}
 
           <p id={s.mainExtractDesc}>
-            <span id={s.mainExtractTitle}>Zitoune - The River (Aurora Cover)</span>
+            <span id={s.mainExtractTitle}>{mainVideo.title}</span>
             <br />
-            {/* Tourné à... (remplacer la ligne complète) */}
+            {mainVideo.desc}
           </p>
         </div>
 
-        <div className={s.secondaryExtracts}>
-          <div className={s.secondaryExtract}>
-            <div className={s.secondaryExtractVideo}>
-              <iframe
-                width="100%"
-                src="https://www.youtube.com/embed/EzPY_Ne0erw"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowfullscreen
-              ></iframe>
+        {videos.map((video, index, array) => {
+          if (index % 2 !== 0) {
+            return null;
+          }
+
+          const v1 = video;
+          const v2 = array[index + 1];
+
+          return (
+            <div className={s.secondaryExtracts}>
+              <div className={s.secondaryExtract}>
+                <div className={s.secondaryExtractVideo}>
+                  <iframe
+                    width="100%"
+                    src={v1.url}
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+
+                <div className={s.secondaryExtractInfos}>
+                  <p>
+                    <span className={s.secondaryExtractVideoTitle}>{v1.title}</span>
+                    <br />
+                    {v1.desc}
+                  </p>
+                </div>
+              </div>
+
+              {v2 && (
+                <div className={s.secondaryExtract}>
+                  <div className={s.secondaryExtractVideo}>
+                    <iframe
+                      width="100%"
+                      src={v2.url}
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+
+                  <div className={s.secondaryExtractInfos}>
+                    <p>
+                      <span className={s.secondaryExtractVideoTitle}>{v2.title}</span>
+                      <br />
+                      {v2.desc}
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
+          );
+        })}
 
-            <div className={s.secondaryExtractInfos}>
-              <p>
-                <span className={s.secondaryExtractVideoTitle}>Augusta - The Feeling's Gone</span>
-                <br />
-                {/* Tourné à... (remplacer la ligne complète) */}
-              </p>
-            </div>
-          </div>
-
-          <div className={s.secondaryExtract}>
-            <div className={s.secondaryExtractVideo}>
-              <iframe
-                width="100%"
-                src="https://www.youtube.com/embed/k6MYyJGcLU0"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div className={s.secondaryExtractInfos}>
-              <p>
-                <span className={s.secondaryExtractVideoTitle}>Tindaya - Words We Never Say</span>
-                <br />
-                {/* Tourné à... (remplacer la ligne complète) */}
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <div className={s.secondaryExtracts}>
-          <div className={s.secondaryExtract}>
-            <div className={s.secondaryExtractVideo}>
-              <iframe
-                width="100%"
-                src="https://www.youtube.com/embed/8cUG-oFeTfo"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div className={s.secondaryExtractInfos}>
-              <p>
-                <span className={s.secondaryExtractVideoTitle}>FLO - Comme Je Suis</span>
-                <br />
-                Tourné sur une ancienne voie ferrée
-              </p>
-            </div>
-          </div>
-
-          <div className={s.secondaryExtract}>
-            <div className={s.secondaryExtractVideo}>
-              <iframe
-                width="100%"
-                src="https://www.youtube.com/embed/i7bljfLBmW0"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div className={s.secondaryExtractInfos}>
-              <p>
-                <span className={s.secondaryExtractVideoTitle}>David William - Hold Me Down</span>
-                <br />
-
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className={s.secondaryExtracts}>
-
-          <div className={s.secondaryExtract}>
-            <div className={s.secondaryExtractVideo}>
-              <iframe
-                width="100%"
-                src="https://www.youtube.com/embed/Wt5O_3Ap9TQ"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div className={s.secondaryExtractInfos}>
-              <p>
-                <span className={s.secondaryExtractVideoTitle}>Augusta - The Birds</span>
-                <br />
-
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
 
