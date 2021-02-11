@@ -142,7 +142,7 @@ const ProfessionnelsPage = () => {
     }
   `);
 
-    const title = 'RAWS - Production Audiovisuelle';
+    const title = 'RAWS - Production Audiovisuelle pour les professionnels';
     const image = 'https://rawssessions.com' + images.heroBackground.childImageSharp.src;
 
     const mainVideo = videos.shift();

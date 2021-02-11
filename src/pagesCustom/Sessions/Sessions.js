@@ -125,7 +125,7 @@ const SessionsPage = () => {
     }
   `);
 
-    const title = 'RAWS - Production Audiovisuelle';
+    const title = 'RAWS - Sessions musicales intimistes';
     const image = 'https://rawssessions.com' + images.heroBackground.childImageSharp.src;
 
     const mainVideo = videos.shift();
