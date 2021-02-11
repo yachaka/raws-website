@@ -77,7 +77,7 @@ const SessionsPage = () => {
 
       headerOvalBckgd: file(relativePath: { eq: "assets/images/oval-bckgd-home-header.png" }) {
         childImageSharp {
-          fixed(width: 1259, height: 259, quality: 100) {
+          fixed(width: 1220, height: 259, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }

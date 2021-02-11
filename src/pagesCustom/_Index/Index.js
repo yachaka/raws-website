@@ -91,14 +91,6 @@ const IndexPage = () => {
         }
       }
 
-      headerOvalBckgd: file(relativePath: { eq: "assets/images/oval-bckgd-home-header.png" }) {
-        childImageSharp {
-          fixed(width: 1259, height: 259, quality: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-
       headerOvalBckgd2: file(relativePath: { eq: "assets/images/oval-shadow-2.png" }) {
         childImageSharp {
           fixed(width: 1220, height: 260, quality: 100) {
