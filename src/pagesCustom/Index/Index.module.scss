@@ -9,26 +9,77 @@ $oval-backgd-width: 1259px;
   position: relative;
   height: 100vh;
   overflow-x: hidden;
+
+  .heroImage1, .heroImage2 {
+    transition: opacity 200ms ease-in-out;
+    position: relative;
+
+    .partTitle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 10101;
+      padding: 16px;
+
+      h2 {
+        position: relative;
+
+        .ovalShadow {
+          z-index: 1;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-40%);
+          opacity: .7;
+        }
+
+        .text {
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  .heroImage1 {
+    opacity: .85;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .heroImage2 {
+    opacity: .8;
+    &:hover {
+      opacity: .95;
+    }
+
+    .ovalShadow {
+      opacity: .4 !important;
+    }
+  }
 }
 
 #heroHeaderOvalBckgd {
   position: absolute;
-  left: 50%;
-  top: 0;
-  margin-left: ($oval-backgd-width / 2 * -1) + 50; // 50 to move the shadow more towards the text
+  left: 30px;
+  top: 50%;
+  margin-left: ($oval-backgd-width / 2 * -1) + 100; // 50 to move the shadow more towards the text
+  margin-top: -125px;
+  opacity: .5;
+  pointer-events: none;
 }
 
 #heroHeader {
   position: absolute;
-  left: 50%;
-  top: 50px;
-  margin-left: -($logo-size + $margin-right-of-logo / 2);
-
-  @media screen and (max-width: $phone-upper-breakpoint) {
-    float: none;
-    margin-left: 0;
-    transform: translateX(-50%);
-  }
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #heroLogo {
@@ -39,7 +90,6 @@ $oval-backgd-width: 1259px;
   @media screen and (max-width: $phone-upper-breakpoint) {
     float: none;
     display: block;
-    margin: auto;
     width: 100px;
   }
 }
@@ -58,6 +108,7 @@ $oval-backgd-width: 1259px;
 
 .pillMarged {
   margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 #heroHeaderRight {
@@ -70,521 +121,3 @@ $oval-backgd-width: 1259px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-.intro {
-  text-align: center;
-  font-size: 26px;
-  line-height: 40px;
-  max-width: 980px;
-
-  margin: auto;
-  padding-top: 180px;
-  padding-bottom: 110px;
-  opacity: .9;
-
-  @media screen and (max-width: $phone-upper-breakpoint) {
-    font-size: 22px;
-    line-height: 34px;
-    margin: 0 24px;
-  }
-}
-
-
-
-
-
-
-.videosExtracts {
-  padding: 0 45px;
-  padding-top: 110px;
-  padding-bottom: 150px;
-
-  @media screen and (max-width: $phone-upper-breakpoint) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  h1 {
-    margin-bottom: 70px;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      // margin-bottom: 40px;
-    }
-  }
-
-
-  #mainExtract {
-    margin-bottom: 70px;
-    overflow: auto;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      margin: 0 -24px;
-    }
-
-    #mainExtractVideo {
-      width: 66%;
-      display: block;
-      margin-right: 40px;
-      float: left;
-
-      iframe {
-        width: 100%;
-        height: 400px;
-      }
-
-      @media screen and (max-width: $phone-upper-breakpoint) {
-        width: 100%;
-        float: none;
-        margin-bottom: 24px;
-        margin-right: 0;
-
-        iframe {
-          height: 300px;
-        }
-      }
-    }
-
-    #mainExtractDesc {
-      overflow: hidden;
-      font-size: 26px;
-      line-height: 40px;
-      opacity: .8;
-
-      #mainExtractTitle {
-        font-size: 30px;
-        font-weight: bold;
-      }
-
-      @media screen and (min-width: $desktops-lower-breakpoint) {
-        font-size: 30px;
-
-        #mainExtractTitle {
-          font-size: 36px;
-        }
-      }
-
-      @media screen and (max-width: $phone-upper-breakpoint) {
-        font-size: 20px;
-        line-height: 26px;
-        padding: 12px 24px 24px 24px;
-        margin-bottom: 70px;
-
-        #mainExtractTitle {
-          font-size: 26px;
-        }
-      }
-    }
-  }
-
-  .secondaryExtracts {
-    display: flex;
-    flex-direction: row;
-    margin: 0 -35px 50px;
-
-    @media screen and (max-width: 1170px) {
-      flex-direction: column;
-      margin: -30px 0;
-    }
-
-
-    .secondaryExtract {
-      flex: 1;
-      margin: 0 35px;
-
-      @media screen and (max-width: 1170px) {
-        margin: 30px 0;
-      }
-
-      .secondaryExtractVideo {
-        width: 300px;
-        height: 190px;
-        float: left;
-        background-color: #000;
-        margin-right: 30px;
-
-        iframe {
-          height: 100%;
-        }
-
-        @media screen and (max-width: $phone-upper-breakpoint) {
-          width: 100%;
-          height: 300px;
-          float: none;
-          margin-bottom: 24px;
-        }
-      }
-
-      .secondaryExtractVideoTitle {
-        font-size: 26px;
-        font-weight: bold;
-      }
-
-
-      .secondaryExtractInfos {
-        overflow: hidden;
-        font-size: 22px;
-        line-height: 1.5;
-        opacity: .7;
-        margin-left: 30px;
-
-        @media screen and (min-width: $desktops-lower-breakpoint) {
-          font-size: 26px;
-        }
-
-        @media screen and (max-width: $phone-upper-breakpoint) {
-          font-size: 18px;
-          margin-left: 12px;
-        }
-      }
-    }
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-.musicalVideo {
-  margin-right: 30px;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  overflow-x: hidden;
-
-  @media screen and (max-width: $phone-upper-breakpoint) {
-    margin-right: 0;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  #musicalVideoImage {
-    width: 60%;
-    margin-right: 70px;
-    float: left;
-    position: relative;
-
-    @media screen and (max-width: 900px) {
-      width: 50%;
-    }
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      width: 120%;
-      float: none;
-      margin-bottom: 70px;
-      margin-left: -24px;
-      margin-right: -24px;
-    }
-
-    #textWithGradient {
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      z-index: 2;
-      width: 100%;
-    }
-  }
-
-  h1 {
-    margin-bottom: 30px;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      margin-bottom: 70px;
-    }
-  }
-
-  p {
-    font-size: 26px;
-    line-height: 40px;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      font-size: 22px;
-      line-height: 30px;
-    }
-  }
-
-  #musicalVideoInfos {
-    overflow: hidden;
-
-    p {
-      opacity: .7;
-      margin-bottom: 40px;
-
-      @media screen and (max-width: $phone-upper-breakpoint) {
-        margin-bottom: 70px;
-      }
-    }
-  }
-}
-
-
-
-
-
-.knowHow {
-  margin: 0 45px;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  position: relative;
-
-  @media screen and (max-width: $phone-upper-breakpoint) {
-    margin: 0 24px
-  }
-
-  h1 {
-    margin-bottom: 115px;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      margin-bottom: 70px;
-    }
-  }
-
-  #stuffUsed {
-    max-width: 980px;
-    margin: auto;
-    margin-left: 60px;
-    font-size: 26px;
-    line-height: 40px;
-    opacity: .8;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      margin-top: 70px;
-      margin-left: 0;
-      width: auto;
-      font-size: 22px;
-      line-height: 30px;
-    }
-
-    #stuffUsedTitle {
-      font-size: 32px;
-      line-height: 42px;
-
-      @media screen and (max-width: $phone-upper-breakpoint) {
-        font-size: 26px;
-        line-height: 30px;
-      }
-    }
-
-    strong {
-      font-weight: bold;
-      letter-spacing: 0.5px;
-    }
-  }
-
-  #knowHowBoxes {}
-
-  .knowHowBoxRow {
-    margin-bottom: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      flex-direction: column;
-      margin-bottom: 0;
-    }
-  }
-  .knowHowBoxRow.second {
-    justify-content: space-around;
-  }
-
-  .knowHowBox {
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      position: static;
-      width: 240px;
-      margin: auto;
-      margin-bottom: 30px;
-    }
-
-    padding: 0 16px;
-    margin: 0 16px;
-    width: 270px;
-    height: 270px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #202020;
-
-    svg {
-      height: 80px;
-      fill: $beige;
-      margin-bottom: 30px;
-    }
-
-    h4 {
-      font-family: 'Recoleta Bold';
-      letter-spacing: 0.5px;
-      font-size: 22px;
-      text-align: center;
-    }
-  }
-}
-
-
-
-
-
-
-
-.enterprise {
-  padding: 0 45px;
-  padding-top: 150px;
-  padding-bottom: 150px;
-
-  @media screen and (max-width: $phone-upper-breakpoint) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  h1 {
-    margin-bottom: 70px;
-  }
-
-  #enterpriseFocusP {
-    opacity: .8;
-    max-width: 1000px;
-    width: 80%;
-    font-size: 30px;
-    line-height: 50px;
-    margin-bottom: 30px;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      font-size: 24px;
-      line-height: 40px;
-      width: auto;
-    }
-
-  }
-
-  #enterpriseSmallP {
-    opacity: .7;
-    font-size: 30px;
-    line-height: 40px;
-    margin-bottom: 70px;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      font-size: 22px;
-      line-height: 30px;
-    }
-  }
-}
-
-
-
-
-
-.aboutUs {
-  text-align: center;
-  padding-top: 150px;
-  padding-bottom: 300px;
-
-  h1 {
-    margin-bottom: 115px;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      margin-bottom: 70px;
-    }
-  }
-
-  #aboutUs_Us {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      flex-direction: column;
-      margin: -70px 0;
-    }
-
-
-    .person {
-      margin: 0 55px;
-
-      @media screen and (max-width: $phone-upper-breakpoint) {
-        margin: 70px 0;
-      }
-
-
-      h3 {
-        font-size: 36px;
-        line-height: 50px;
-        margin-bottom: 30px;
-
-        @media screen and (max-width: $phone-upper-breakpoint) {
-          font-size: 30px;
-          line-height: 38px;
-        }
-      }
-
-      .image {
-        display: inline-block;
-        margin-bottom: 40px;
-        background-color: #7A6245;
-        border-radius: 60px;
-        overflow: hidden;
-      }
-
-      p {
-        font-size: 30px;
-        line-height: 40px;
-        opacity: .7;
-
-        @media screen and (max-width: $phone-upper-breakpoint) {
-          font-size: 22px;
-          line-height: 30px;
-        }
-      }
-    }
-  }
-}
-
-
-
-
-footer {
-  margin-bottom: 20px;
-  font-size: 30px;
-  line-height: 40px;
-  text-align: center;
-
-  @media screen and (max-width: $phone-upper-breakpoint) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-
-  ul {
-    margin: auto;
-
-    li {
-      display: inline-block;
-
-      a {
-        color: $beige;
-        text-decoration: none;
-      }
-
-      &.separator {
-        margin: 0 20px;
-
-        @media screen and (max-width: $phone-upper-breakpoint) {
-          margin: 0 12px;
-        }
-      }
-    }
-  }
-}

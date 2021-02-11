@@ -5,16 +5,9 @@ import Img from "gatsby-image"
 import burgerMenuIcon from "../../assets/images/icons/burger.svg";
 import s from "./Nav.module.scss";
 
-const links = [
-  { elId: 'intro', text: 'Raws' },  
-  { elId: 'extraits', text: 'Vidéos' },  
-  { elId: 'clip-musical', text: 'Votre session' },  
-  { elId: 'savoir-faire', text: 'Prestations' },  
-  { elId: 'entreprises', text: 'Entreprises' },  
-  { elId: 'a-propos', text: 'À propos' },
-];
-
-export default function Nav() {
+export default function Nav({
+  links,
+}) {
   const images = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "assets/images/logo-raws-beige.jpg" }) {

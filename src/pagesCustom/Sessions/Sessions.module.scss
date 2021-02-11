@@ -1,0 +1,502 @@
+
+@import "../../styles/vars.scss";
+
+$margin-right-of-logo: 30px;
+$logo-size: 100px;
+$oval-backgd-width: 1259px;
+
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#heroHeaderOvalBckgd {
+  position: absolute;
+  left: 30px;
+  top: 75px;
+  margin-left: ($oval-backgd-width / 2 * -1) + 100; // 50 to move the shadow more towards the text
+  margin-top: -125px;
+  opacity: .5;
+}
+
+#heroHeader {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    float: none;
+    margin-left: 0;
+    transform: translateX(-50%);
+  }
+}
+
+#heroSwitch {
+    display: block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: lighten($marron, 20%);
+    background-color: #202020;
+    border: 1px solid $marron;
+    box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+    opacity: .9;
+    text-decoration: none;
+    transition: opacity 200ms ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+#heroLogo {
+    box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+  display: inline-block;
+  float: left;
+  margin-right: 30px;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    float: none;
+    display: block;
+    margin: auto;
+    width: 100px;
+  }
+}
+
+#shortDesc {
+  font-family: 'Recoleta Bold';
+  letter-spacing: 0.5px;
+  font-size: 26px;
+  line-height: 40px;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    display: none;
+  }
+}
+
+.pillMarged {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+#heroHeaderRight {
+  overflow: hidden;
+  padding-top: 10px;
+  white-space: nowrap;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    padding-top: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.intro {
+  text-align: center;
+  font-size: 26px;
+  line-height: 40px;
+  max-width: 980px;
+
+  margin: auto;
+  padding-top: 180px;
+  padding-bottom: 110px;
+  opacity: .9;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    font-size: 22px;
+    line-height: 34px;
+    margin: 0 24px;
+  }
+}
+
+
+
+
+
+
+.videosExtracts {
+  padding: 0 45px;
+  padding-top: 110px;
+  padding-bottom: 150px;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  h2 {
+    margin-bottom: 70px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      // margin-bottom: 40px;
+    }
+  }
+
+
+  #mainExtract {
+    margin-bottom: 70px;
+    overflow: auto;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      margin: 0 -24px;
+    }
+
+    #mainExtractVideo {
+      width: 66%;
+      display: block;
+      margin-right: 40px;
+      float: left;
+
+      iframe {
+        width: 100%;
+        height: 400px;
+      }
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        width: 100%;
+        float: none;
+        margin-bottom: 24px;
+        margin-right: 0;
+
+        iframe {
+          height: 300px;
+        }
+      }
+    }
+
+    #mainExtractDesc {
+      overflow: hidden;
+      font-size: 26px;
+      line-height: 40px;
+      opacity: .8;
+
+      #mainExtractTitle {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      @media screen and (min-width: $desktops-lower-breakpoint) {
+        font-size: 30px;
+
+        #mainExtractTitle {
+          font-size: 36px;
+        }
+      }
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        font-size: 20px;
+        line-height: 26px;
+        padding: 12px 24px 24px 24px;
+        margin-bottom: 70px;
+
+        #mainExtractTitle {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  .secondaryExtracts {
+    display: flex;
+    flex-direction: row;
+    margin: 0 -35px 50px;
+
+    @media screen and (max-width: 1170px) {
+      flex-direction: column;
+      margin: -30px 0;
+    }
+
+
+    .secondaryExtract {
+      flex: 1;
+      margin: 0 35px;
+
+      @media screen and (max-width: 1170px) {
+        margin: 30px 0;
+      }
+
+      .secondaryExtractVideo {
+        width: 300px;
+        height: 190px;
+        float: left;
+        background-color: #000;
+        margin-right: 30px;
+
+        iframe {
+          height: 100%;
+        }
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          width: 100%;
+          height: 300px;
+          float: none;
+          margin-bottom: 24px;
+        }
+      }
+
+      .secondaryExtractVideoTitle {
+        font-size: 26px;
+        font-weight: bold;
+      }
+
+
+      .secondaryExtractInfos {
+        overflow: hidden;
+        font-size: 22px;
+        line-height: 1.5;
+        opacity: .7;
+        margin-left: 30px;
+
+        @media screen and (min-width: $desktops-lower-breakpoint) {
+          font-size: 26px;
+        }
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          font-size: 18px;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.musicalVideo {
+  margin-right: 30px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  overflow-x: hidden;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    margin-right: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  #musicalVideoImage {
+    width: 60%;
+    margin-right: 70px;
+    float: left;
+    position: relative;
+
+    @media screen and (max-width: 900px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      width: 120%;
+      float: none;
+      margin-bottom: 70px;
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+
+    #textWithGradient {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      z-index: 2;
+      width: 100%;
+    }
+  }
+
+  h2 {
+    margin-bottom: 30px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      margin-bottom: 70px;
+    }
+  }
+
+  p {
+    font-size: 26px;
+    line-height: 40px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  #musicalVideoInfos {
+    overflow: hidden;
+
+    p {
+      opacity: .7;
+      margin-bottom: 40px;
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        margin-bottom: 70px;
+      }
+    }
+  }
+}
+
+
+.supportUs {
+    padding: 0 20px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 70px;
+    }
+
+    p {
+        margin: auto;
+        margin-bottom: 70px;
+        max-width: 740px;
+        font-size: 26px;
+        line-height: 40px;
+        opacity: .8;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+
+    .patreonBtn {
+        border-color: #b33038;
+        color: #b33038;
+
+        &:hover {
+            border-color: lighten(#b33038, 7%);
+            color: lighten(#b33038, 7%);
+        }
+    }
+}
+
+
+
+.aboutUs {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 300px;
+
+  h2 {
+    margin-bottom: 115px;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      margin-bottom: 70px;
+    }
+  }
+
+  #aboutUs_Us {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media screen and (max-width: $phone-upper-breakpoint) {
+      flex-direction: column;
+      margin: -70px 0;
+    }
+
+
+    .person {
+      margin: 0 55px;
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        margin: 70px 0;
+      }
+
+
+      h3 {
+        font-size: 36px;
+        line-height: 50px;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          font-size: 30px;
+          line-height: 38px;
+        }
+      }
+
+      .image {
+        display: inline-block;
+        margin-bottom: 40px;
+        background-color: #7A6245;
+        border-radius: 60px;
+        overflow: hidden;
+      }
+
+      p {
+        font-size: 22px;
+        line-height: 32px;
+        opacity: .7;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+footer {
+  margin-bottom: 20px;
+  font-size: 26px;
+  line-height: 40px;
+  text-align: center;
+
+  @media screen and (max-width: $phone-upper-breakpoint) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+
+  ul {
+    margin: auto;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: $beige;
+        text-decoration: none;
+      }
+
+      &.separator {
+        margin: 0 20px;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          margin: 0 12px;
+        }
+      }
+    }
+  }
+}
