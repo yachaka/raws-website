@@ -5,11 +5,6 @@ import Img from "gatsby-image"
 import SEO from '../../components/SEO';
 import Btn from "../../components/Btn/Btn";
 import Nav from "../../components/Nav/Nav";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
-import FacebookPill from '../../components/SocialPills/FacebookPill';
-import InstagramPill from '../../components/SocialPills/InstagramPill';
-import YoutubePill from '../../components/SocialPills/YoutubePill';
-import TwitterPill from '../../components/SocialPills/TwitterPill';
 
 // import augusta480p from '../../assets/videos/augusta-480p.mp4';
 // import augusta720p from '../../assets/videos/augusta-720p.mp4';
