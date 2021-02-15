@@ -14,17 +14,17 @@ import s from './Professionnels.module.scss';
 
 const videos = [
     {
-        url: 'https://youtu.be/6PoU3vlusNs',
+        url: 'https://www.youtube.com/watch?v=6PoU3vlusNs&feature=youtu.be',
         title: 'Entretien avec StanLei',
         desc: '',
     },
     {
-        url: 'https://youtu.be/AwMh7b2w1g8',
+        url: 'https://www.youtube.com/watch?v=AwMh7b2w1g8&feature=youtu.be',
         title: 'Entretien avec Marty Went Back',
         desc: '',
     },
         {
-        url: 'https://youtu.be/tgdYWu6bzss',
+        url: 'https://www.youtube.com/watch?v=tgdYWu6bzss&feature=youtu.be',
         title: 'Lieu Commun x Raws x Marty Went Back',
         desc: '',
     },
