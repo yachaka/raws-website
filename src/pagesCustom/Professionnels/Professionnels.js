@@ -14,13 +14,18 @@ import s from './Professionnels.module.scss';
 
 const videos = [
     {
-        url: 'https://www.youtube.com/embed/ISYLWUvP8rk',
-        title: 'StanLei - Bright Blue',
+        url: 'https://www.youtube.com/embed/6PoU3vlusNs',
+        title: 'Entretien avec StanLei',
         desc: '',
     },
     {
-        url: 'https://www.youtube.com/embed/R74q_ITO4XU',
-        title: 'Zitoune - The River (Aurora Cover)',
+        url: 'https://www.youtube.com/embed/AwMh7b2w1g8',
+        title: 'Entretien avec Marty Went Back',
+        desc: '',
+    },
+        {
+        url: 'https://www.youtube.com/embed/tgdYWu6bzss',
+        title: 'Lieu Commun x Raws x Marty Went Back',
         desc: '',
     },
 ];
