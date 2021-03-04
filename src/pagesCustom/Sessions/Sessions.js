@@ -14,6 +14,11 @@ import s from './Sessions.module.scss';
 
 const videos = [
     {
+        url: 'https://www.youtube.com/embed/eUVXOnAdCfg',
+        title: 'Marty Went Back - Bushes',
+        desc: '',
+    },
+    {
         url: 'https://www.youtube.com/embed/ISYLWUvP8rk',
         title: 'StanLei - Bright Blue',
         desc: '',
@@ -123,7 +128,8 @@ const SessionsPage = () => {
     const title = 'RAWS - Sessions musicales intimistes';
     const image = 'https://rawssessions.com' + images.heroBackground.childImageSharp.src;
 
-    const mainVideo = videos.shift();
+    const mainVideo = videos[0];
+    const otherVideos = videos.slice(1);
 
     return (
         <>
@@ -224,7 +230,7 @@ const SessionsPage = () => {
                     </p>
                 </div>
 
-                {videos.map((video, index, array) => {
+                {otherVideos.map((video, index, array) => {
                     if (index % 2 !== 0) {
                         return null;
                     }
@@ -233,7 +239,7 @@ const SessionsPage = () => {
                     const v2 = array[index + 1];
 
                     return (
-                        <div className={s.secondaryExtracts}>
+                        <div className={s.secondaryExtracts} key={v1.url}>
                             <div className={s.secondaryExtract}>
                                 <div className={s.secondaryExtractVideo}>
                                     <iframe
@@ -314,13 +320,18 @@ const SessionsPage = () => {
             <div id="supportez-nous" className={s.supportUs}>
                 <h2>Supportez Raws Sessions</h2>
 
-                <p>
-                    Raws sessions est une série de vidéos que nous auto-produisons.
-                    Les vidéos sont et resteront gratuites pour les artistes et bien sur pour vous. 
-                    Cependant, réaliser ces vidéos nous demande du temps et des ressources. 
-                    <br/>
-                    <br/>Patreon est un moyen pour nous de financer ce projet, vous pouvez nous aider et soutenir Raws en devenant contributeurs.
-                </p>
+                <div className={s.supportUsContent}>
+                    <iframe id={s.patreonVideo} width="560" height="350" src="https://www.youtube.com/embed/lmVo-UoyGh8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <p>
+                        Raws sessions est une série de vidéos que nous auto-produisons.
+                        Les vidéos sont et resteront gratuites pour les artistes et bien sur pour vous. 
+                        Cependant, réaliser ces vidéos nous demande du temps et des ressources. 
+                        <br/>
+                        <br/>Patreon est un moyen pour nous de financer ce projet, vous pouvez nous aider et soutenir Raws en devenant contributeurs.
+                    </p>
+                </div>
+
 
                 <Btn Component="a" href="https://www.patreon.com/rawssessions" className={s.patreonBtn} target="_blank" rel="noopener noreferrer">
                     Nous soutenir sur Patreon

@@ -6,15 +6,47 @@ $logo-size: 100px;
 $oval-backgd-width: 1220px;
 
 #hero {
+  background-color: $black;
   position: relative;
   height: 100vh;
   overflow-x: hidden;
 
+  &.active {
+    .heroImage1, .heroImage2, #heroHeader {
+      opacity: 1;
+    }
+
+    #heroHeaderOvalBckgd {
+      opacity: .6;
+    }
+
+    .rLetterLoading {
+      opacity: 0;
+    }
+  }
+
+  .rLetterLoading {
+    transition: opacity 150ms ease-out;
+    pointer-events: none;
+    display: block;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
   .heroImage1, .heroImage2 {
-    transition: opacity 200ms ease-in-out;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
     position: relative;
 
+    .heroImageLink {
+      transition: opacity 200ms ease-in-out;
+    }
+
     .partTitle {
+      pointer-events: none;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -31,7 +63,6 @@ $oval-backgd-width: 1220px;
           top: 50%;
           left: 50%;
           transform: translateX(-50%) translateY(-40%);
-          opacity: .7;
         }
 
         .text {
@@ -43,43 +74,82 @@ $oval-backgd-width: 1220px;
   }
 
   .heroImage1 {
-    opacity: .85;
+    transition-delay: 0;
 
-    &:hover {
-      opacity: 1;
+    h2 {
+      color: #A18664;
+
+      .ovalShadow {
+        opacity: 1;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          opacity: .6;
+        }
+      }
+    }
+
+    .heroImageLink {
+      opacity: .85;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
   .heroImage2 {
-    opacity: .8;
-    &:hover {
-      opacity: .95;
+    transition-delay: 600ms;
+
+    h2 {
+      color: #BDB8B2;
+
+      .ovalShadow {
+        opacity: .5;
+
+        @media screen and (max-width: $phone-upper-breakpoint) {
+          opacity: .35;
+        }
+      }
     }
 
-    .ovalShadow {
-      opacity: .4 !important;
+    .heroImageLink {
+      opacity: .8;
+      &:hover {
+        opacity: .95;
+      }
+
+      .ovalShadow {
+        opacity: .4 !important;
+      }
     }
   }
 }
 
 #heroHeaderOvalBckgd {
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+  transition-delay: 300ms;
+  transition-property: opacity;
   position: absolute;
   left: 30px;
-  top: 50%;
+  top: 30px;
   margin-left: ($oval-backgd-width / 2 * -1) + 100; // 50 to move the shadow more towards the text
-  margin-top: -125px;
-  opacity: .5;
+  margin-top: -75px;
   pointer-events: none;
 }
 
 #heroHeader {
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+  transition-delay: 300ms;
+  transition-property: opacity;
   position: absolute;
   left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 30px;
+  // transform: translateY(-50%);
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #heroLogo {

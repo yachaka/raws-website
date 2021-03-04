@@ -52,6 +52,7 @@ nav {
   }
 
   ul#desktopLinks {
+    float: left;
 
     @media screen and (max-width: 800px) {
       display: none;
@@ -169,11 +170,42 @@ nav.visible {
 
   ul {
     margin: -12px 0;
+    margin-bottom: 40px;
 
     a {
       color: $beige;
       display: inline-block;
       margin: 12px 0;
     }
+  }
+}
+
+.partSwitch {
+  display: inline-block;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  color: lighten($marron, 20%);
+  background-color: #202020;
+  border: 1px solid $marron;
+  box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+  -webkit-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+  -moz-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+  opacity: .9;
+  text-decoration: none;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+      opacity: 1;
+  }
+}
+
+.partSwitchDesktop {
+  line-height: 50px;
+  height: 50px;
+  float: right;
+
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 }

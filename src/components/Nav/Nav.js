@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import burgerMenuIcon from "../../assets/images/icons/burger.svg";
@@ -7,6 +7,7 @@ import s from "./Nav.module.scss";
 
 export default function Nav({
   links,
+  switchBtn,
 }) {
   const images = useStaticQuery(graphql`
     query {
@@ -91,6 +92,20 @@ export default function Nav({
     return () => window.removeEventListener('scroll', followScroll, { passive: true });
   }, []);
 
+  let switchBtnTxt;
+  let switchBtnUrl;
+  let switchBtnTitle;
+
+  if (switchBtn === 'pro') {
+    switchBtnTxt = 'Pro';
+    switchBtnUrl = '/professionnels';
+    switchBtnTitle = 'Production audiovisuelle pour les professionnels';
+  } else {
+    switchBtnTxt = 'Sessions';
+    switchBtnUrl = '/sessions';
+    switchBtnTitle = 'Sessions musicales intimistes';
+  }
+
   return (
     <nav ref={navEl} className={isVisible && s.visible}>
       <div id={s.logo}>
@@ -114,6 +129,14 @@ export default function Nav({
         ))}
       </ul>
 
+      <Link
+        to={switchBtnUrl}
+        className={`${s.partSwitch} recoleta ${s.partSwitchDesktop}`}
+        title="Production audiovisuelle pour les professionnels"
+      >
+        {switchBtnTxt}
+      </Link>
+
       <div id={s.mobileOverlayLinks} className={isMobileOverlayVisible && s.overlayVisible}>
         <button id={s.mobileLinksClose} onClick={closeMobileOverlay}>
           ← Fermer
@@ -121,11 +144,19 @@ export default function Nav({
 
         <ul>
           {links.map((l, i) => (
-            <li className={i === currentLinkShown && s.selected}>
+            <li className={i === currentLinkShown && s.selected} key={l.elId}>
               <a href={`#${l.elId}`} onClick={closeMobileOverlay}>{l.text}</a>
             </li>
           ))}
-        </ul>        
+        </ul>
+
+        <Link
+          to={switchBtnUrl}
+          className={`${s.partSwitch} recoleta`}
+          title="Production audiovisuelle pour les professionnels"
+        >
+          {switchBtnTxt}
+        </Link>
       </div>
     </nav>
   );

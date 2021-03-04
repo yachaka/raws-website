@@ -60,9 +60,9 @@ $oval-backgd-width: 1220px;
 }
 
 #heroLogo {
-    box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
-    -webkit-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
-    -moz-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+  box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+  -webkit-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
+  -moz-box-shadow: 0 0 14px 0px rgba(0,0,0,0.65);
   display: inline-block;
   float: left;
   margin-right: 30px;
@@ -368,13 +368,48 @@ $oval-backgd-width: 1220px;
     padding-bottom: 150px;
     text-align: center;
 
+    .supportUsContent {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      max-width: 1400px;
+      margin: auto;
+      margin-bottom: 70px;
+      padding: 35px;
+
+      @media screen and (max-width: 1200px) {
+        flex-direction: column;
+
+        iframe {
+          margin-bottom: 70px;
+          flex: auto;
+          width: auto;
+          height: 400px;
+          margin-right: 70px;
+        }
+      }
+
+      @media screen and (max-width: $phone-upper-breakpoint) {
+        iframe {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+
     h2 {
         margin-bottom: 70px;
     }
 
+    iframe {
+      flex: 1;
+      margin-left: 70px;
+      height: 400px;
+    }
+
     p {
+        flex: 1;
         margin: auto;
-        margin-bottom: 70px;
         max-width: 740px;
         font-size: 26px;
         line-height: 40px;

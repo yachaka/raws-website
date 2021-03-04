@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
@@ -60,7 +60,7 @@ const IndexPage = () => {
 
       ovalShadowProfessionnelsText: file(relativePath: { eq: "assets/images/oval-shadow-professionnels-text.png" }) {
         childImageSharp {
-          fixed(width: 320, height: 60, quality: 100) {
+          fixed(width: 370, height: 70, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -72,6 +72,13 @@ const IndexPage = () => {
     const title = 'RAWS - Production Audiovisuelle';
     const image = 'https://rawssessions.com' + images.accueilSessions.childImageSharp.src;
 
+    const heroElRef = useRef(null);
+    useEffect(() => {
+      setTimeout(() => {
+        heroElRef.current.classList.add(s.active);
+      }, 600);
+    }, []);
+
     return (
         <>
           <SEO
@@ -80,7 +87,10 @@ const IndexPage = () => {
               imageAlt="Prise de son, extérieur, scène, enregistrement vidéo"
           />
 
-          <div id={s.hero}>
+          <div id={s.hero} ref={heroElRef}>
+            <span className={`${s.rLetterLoading} recoleta`}>
+              R
+            </span>
             <div className={`${s.heroImage} ${s.heroImage1}`}>
               <div className={s.partTitle}>
                 <h2>
@@ -93,7 +103,8 @@ const IndexPage = () => {
                   </span>
                 </h2>
               </div>
-              <Link to="/sessions">
+
+              <Link to="/sessions" className={s.heroImageLink}>
                 <Img
                   className={s.heroImage1}
                   fluid={images.accueilSessions.childImageSharp.fluid}
@@ -115,7 +126,7 @@ const IndexPage = () => {
                 </h2>
               </div>
 
-              <Link to="/professionnels">
+              <Link to="/professionnels" className={s.heroImageLink}>
                 <Img
                   className={s.heroImage2}
                   fluid={images.accueilPro.childImageSharp.fluid}
@@ -141,11 +152,11 @@ const IndexPage = () => {
 
                 <div id={s.heroHeaderRight}>
                     <p id={s.shortDesc}>
-                        Production<br />Audiovisuelle
+                        Production Audiovisuelle
                     </p>
 
                     <FacebookPill className={s.pillMarged} />
-                    <InstagramPill className={s.pillMarged} /><br />
+                    <InstagramPill className={s.pillMarged} />
                     <YoutubePill className={s.pillMarged} />
                     <TwitterPill />
                 </div>
