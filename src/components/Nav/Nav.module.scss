@@ -182,6 +182,7 @@ nav.visible {
 
 .partSwitch {
   display: inline-block;
+  min-width: 70px;
   height: 70px;
   text-align: center;
   line-height: 70px;
@@ -201,6 +202,7 @@ nav.visible {
 }
 
 .partSwitchDesktop {
+  min-width: 50px;
   line-height: 50px;
   height: 50px;
   float: right;

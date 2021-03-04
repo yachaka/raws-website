@@ -147,6 +147,7 @@ const SessionsPage = () => {
                     { elId: 'supportez-nous', text: 'Nous soutenir' },
                     { elId: 'a-propos', text: 'À propos' },
                 ]}
+                switchBtn="pro"
             />
 
             <div id={s.hero}>
