@@ -43,7 +43,7 @@ const ProfessionnelsPage = () => {
 
       heroBackground: file(relativePath: { eq: "assets/images/spots-scene.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2200, quality: 80) {
+          fluid(maxWidth: 2200, quality: 80, base64Width: 42) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -51,13 +51,13 @@ const ProfessionnelsPage = () => {
 
       headerOvalBckgd2: file(relativePath: { eq: "assets/images/oval-shadow-2.png" }) {
         childImageSharp {
-          fixed(width: 1220, height: 260, quality: 100) {
+          fixed(width: 1220, height: 260, quality: 100, base64Width: 42) {
             ...GatsbyImageSharpFixed
           }
         }
       }
 
-      votreDevis: file(relativePath: { eq: "assets/images/ben-camera.jpg" }) {
+      votreDevis: file(relativePath: { eq: "assets/images/ben-camera-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1600, quality: 90) {
             ...GatsbyImageSharpFluid
@@ -65,14 +65,14 @@ const ProfessionnelsPage = () => {
         }
       }
 
-      captationVideo: file(relativePath: { eq: "assets/images/ben-camera-2.jpg" }) {
+      captationVideo: file(relativePath: { eq: "assets/images/ben-camera.jpg" }) {
         childImageSharp {
           fixed(width: 270, height: 270, quality: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      captationVideoFull: file(relativePath: { eq: "assets/images/ben-camera-2.jpg" }) {
+      captationVideoFull: file(relativePath: { eq: "assets/images/ben-camera.jpg" }) {
         childImageSharp {
           resize(width: 2200, height: 2200, fit: CONTAIN, quality: 90) {
             src
@@ -163,60 +163,62 @@ const ProfessionnelsPage = () => {
             ]} />
 
             <div id={s.hero}>
-                <Img
-                    fluid={images.heroBackground.childImageSharp.fluid}
-                    style={{ height: '100%' }}
-                    imgStyle={{ 'object-position': 'center left' }}
-                    objectPosition="top left"
-                />
+              <Img
+                  fluid={images.heroBackground.childImageSharp.fluid}
+                  style={{ height: '100%' }}
+                  imgStyle={{ 'object-position': 'center left' }}
+                  objectPosition="top left"
+              />
 
-                <div id={s.heroHeaderOvalBckgd}>
-                    <Img
-                        fixed={images.headerOvalBckgd2.childImageSharp.fixed}
-                        alt="RAWS"
-                    />
-                </div>
+              <div id={s.heroHeaderOvalBckgd}>
+                  <Img
+                      fixed={images.headerOvalBckgd2.childImageSharp.fixed}
+                      alt="RAWS"
+                  />
+              </div>
 
-                <Link
-                    to="/sessions"
-                    id={s.heroSwitch}
-                    className="recoleta"
-                    title="Sessions musicales intimistes"
-                >
-                    Sessions
-                </Link>
+              <Link
+                  to="/sessions"
+                  id={s.heroSwitch}
+                  className="recoleta"
+                  title="Sessions musicales intimistes"
+              >
+                  Sessions
+              </Link>
 
-                <div id={s.heroHeader}>
-                    <div id={s.heroLogo}>
-                        <Img
-                            fixed={images.logo.childImageSharp.fixed}
-                            alt="RAWS"
-                        />
-                    </div>
+              <div id={s.heroHeader}>
+                  <div id={s.heroLogo}>
+                      <Img
+                          fixed={images.logo.childImageSharp.fixed}
+                          alt="RAWS"
+                      />
+                  </div>
 
-                    <div id={s.heroHeaderRight}>
-                        <p id={s.shortDesc}>
-                            Production Audiovisuelle
-                        </p>
+                  <div id={s.heroHeaderRight}>
+                      <p id={s.shortDesc}>
+                          Production Audiovisuelle
+                      </p>
 
-                        {/*<FacebookPill className={s.pillMarged} />
-                        <InstagramPill className={s.pillMarged} />
-                        <YoutubePill className={s.pillMarged} />
-                        <TwitterPill />*/}
-                    </div>
-                </div>
-            </div>
+                      {/*<FacebookPill className={s.pillMarged} />
+                      <InstagramPill className={s.pillMarged} />
+                      <YoutubePill className={s.pillMarged} />
+                      <TwitterPill />*/}
+                  </div>
+              </div>
 
-
-
-            <div id="intro" className={s.intro}>
+              <div id="intro" className={s.intro}>
                 <p>
-                    <span className="recoleta">Raws</span> est une boite de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet etc...
-                    <br/>
-                    <br />Quelque soit votre domaine d'activité, nous nous adaptons pour vous proposer une prestation personnalisée qui répondra à vos attentes, 
-                    telles que des présentations de produits, des interviews, les coulisses de votre activité ou encore des prises de vues de vos locaux.
+                  <span className="recoleta">Raws</span> est une boite de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet etc...
+                        <br />
+                  <br />Quelque soit votre domaine d'activité, nous nous adaptons pour vous proposer une prestation personnalisée qui répondra à vos attentes,
+                        telles que des présentations de produits, des interviews, les coulisses de votre activité ou encore des prises de vues de vos locaux.
                 </p>
+              </div>
             </div>
+
+
+
+            
 
 
             <div id="extraits" className={`${s.videosExtracts} container`}>

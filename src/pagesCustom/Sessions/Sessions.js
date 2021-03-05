@@ -69,7 +69,7 @@ const SessionsPage = () => {
 
       heroBackground: file(relativePath: { eq: "assets/images/augusta-3000x2000.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2200, quality: 80) {
+          fluid(maxWidth: 2200, quality: 80, base64Width: 60) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -77,7 +77,7 @@ const SessionsPage = () => {
 
       headerOvalBckgd: file(relativePath: { eq: "assets/images/oval-bckgd-home-header.png" }) {
         childImageSharp {
-          fixed(width: 1220, height: 259, quality: 100) {
+          fixed(width: 1220, height: 259, quality: 100, base64Width: 42) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -85,7 +85,7 @@ const SessionsPage = () => {
 
       headerOvalBckgd2: file(relativePath: { eq: "assets/images/oval-shadow-2.png" }) {
         childImageSharp {
-          fixed(width: 1220, height: 260, quality: 100) {
+          fixed(width: 1220, height: 260, quality: 100, base64Width: 42) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -93,15 +93,7 @@ const SessionsPage = () => {
 
       musicalClip: file(relativePath: { eq: "assets/images/prise-son-video-ben-remi.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1600, quality: 90) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-      musicalClipTextGradient: file(relativePath: { eq: "assets/images/musical-clip-text-leger.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 703, quality: 90) {
+          fluid(maxWidth: 1600, quality: 90, base64Width: 42) {
             ...GatsbyImageSharpFluid
           }
         }

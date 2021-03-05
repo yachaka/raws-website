@@ -18,14 +18,14 @@ Page sessions :
 
 Page pro :
 
-- mettre le texte d'intro au dessus de l'image héro
-- Rajouter dans le menu, le petit carré pour switcher vers Sessions
-- Rajouter 3 vidéos pro dans les réalisations:
+- X mettre le texte d'intro au dessus de l'image héro
+- X Rajouter dans le menu, le petit carré pour switcher vers Sessions
+- X Rajouter 3 vidéos pro dans les réalisations:
 https://www.youtube.com/watch?v=tgdYWu6bzss&feature=youtu.be
 https://www.youtube.com/watch?v=6PoU3vlusNs&feature=youtu.be
 https://www.youtube.com/watch?v=AwMh7b2w1g8&feature=youtu.be
 - diaporama pour les images des services
-- changer les images : captation vidéo <--> votre devis
+- X changer les images : captation vidéo <--> votre devis
 - Matériel utilisé : faire en une seule ligne, utiliser des icones, le rendre plus beau, réduire son importance
 
-- augmenter la résolution des previews d'image flou pour l'image des héros
+- X augmenter la résolution des previews d'image flou pour l'image des héros
