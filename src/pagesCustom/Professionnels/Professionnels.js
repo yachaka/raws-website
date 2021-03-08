@@ -15,13 +15,13 @@ import s from './Professionnels.module.scss';
 const videos = [
     {
         url: 'https://www.youtube.com/embed/DVWWQ7BB9Uk',
-        title: 'Le Passage | Raws Pro',
+        title: 'Le Passage | Raws',
         desc: '',
     },
 
         {
         url: 'https://www.youtube.com/embed/tgdYWu6bzss',
-        title: 'Lieu Commun | Raws Pro',
+        title: 'Lieu Commun | Raws',
         desc: '',
     },
 ];
