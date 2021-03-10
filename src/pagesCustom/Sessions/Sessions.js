@@ -46,7 +46,7 @@ const videos = [
     {
         url: 'https://www.youtube.com/embed/8cUG-oFeTfo',
         title: 'FLO - Comme Je Suis',
-        desc: 'Tourné sur une ancienne voie ferrée',
+        desc: '',
     },
     {
         url: 'https://www.youtube.com/embed/i7bljfLBmW0',
