@@ -14,6 +14,11 @@ import s from './Sessions.module.scss';
 
 const videos = [
     {
+        url: 'https://www.youtube.com/embed/DLIh5pTnTtE',
+        title: 'David & Augusta - The Old Whistle song',
+        desc: '',
+    },   
+    {
         url: 'https://www.youtube.com/embed/eUVXOnAdCfg',
         title: 'Marty Went Back - Bushes',
         desc: '',
@@ -41,7 +46,7 @@ const videos = [
     {
         url: 'https://www.youtube.com/embed/8cUG-oFeTfo',
         title: 'FLO - Comme Je Suis',
-        desc: 'Tourné sur une ancienne voie ferrée',
+        desc: '',
     },
     {
         url: 'https://www.youtube.com/embed/i7bljfLBmW0',

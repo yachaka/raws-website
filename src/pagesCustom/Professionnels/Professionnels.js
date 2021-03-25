@@ -14,18 +14,14 @@ import s from './Professionnels.module.scss';
 
 const videos = [
     {
-        url: 'https://www.youtube.com/embed/6PoU3vlusNs',
-        title: 'Entretien avec StanLei',
+        url: 'https://www.youtube.com/embed/DVWWQ7BB9Uk',
+        title: 'Le Passage | Raws',
         desc: '',
     },
-    {
-        url: 'https://www.youtube.com/embed/AwMh7b2w1g8',
-        title: 'Entretien avec Marty Went Back',
-        desc: '',
-    },
+
         {
         url: 'https://www.youtube.com/embed/tgdYWu6bzss',
-        title: 'Lieu Commun x Raws x Marty Went Back',
+        title: 'Lieu Commun | Raws',
         desc: '',
     },
 ];
