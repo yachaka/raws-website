@@ -435,7 +435,7 @@ const ProfessionnelsPage = () => {
 
                     <div className={s.devisRight}>
                         <p>
-                            N'hésitez pas à nous contacter en utilisant le formulaire de contact ci-dessous, pour discuter de votre projet, quel qu'il soit. 
+                            N'hésitez pas à nous contacter en utilisant le formulaire ci-dessous, pour discuter de votre projet, quel qu'il soit. 
                             <br />
                             <br />Nous vous répondrons rapidement et réaliserons un devis adapté à votre demande.
                         </p>
