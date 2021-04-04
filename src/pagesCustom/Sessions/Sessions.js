@@ -173,10 +173,12 @@ const SessionsPage = () => {
                     
 
                     <div id={s.heroLogo}>
-                        <Img
-                            fixed={images.logo.childImageSharp.fixed}
-                            alt="RAWS"
-                        />
+                        <Link to="/">
+                            <Img
+                                fixed={images.logo.childImageSharp.fixed}
+                                alt="RAWS"
+                            />
+                        </Link>
                     </div>
 
                     <div id={s.heroHeaderRight}>

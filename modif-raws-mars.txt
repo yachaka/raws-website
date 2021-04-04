@@ -1,7 +1,7 @@
 Page d'accueil:
 
 - remplacer la photo du bas
-- textes : couleur beige, + contours fins
+
 
 Page sessions :
 
@@ -9,10 +9,12 @@ Page pro :
 
 - diaporama pour les images des services
 - Matériel utilisé : faire en une seule ligne, utiliser des icones, le rendre plus beau, réduire son importance
-- sur la page pro, c'est possible de centrer le texte sur l'image, de le remonter un peu et de le mettre en noir
-- centrer le texte entre les deux luminaires, et le remonter, couleur du texte : noir
 - iphone SE : resoudre bug texte intro
 
+------------------------------
 
-- Pro : bug des videos qui disparaissent
-- Ajouter un lien sur le logo vers la page d'accueil
+Page d'accueil :
+- X textes : couleur beige, + contours fins
+- X centrer le texte entre les deux luminaires, et le remonter, couleur du texte : noir
+- X Pro : bug des videos qui disparaissent
+- X Ajouter un lien sur le logo vers la page d'accueil

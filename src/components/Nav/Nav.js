@@ -109,9 +109,11 @@ export default function Nav({
   return (
     <nav ref={navEl} className={isVisible && s.visible}>
       <div id={s.logo}>
-        <Img
-          fixed={images.logo.childImageSharp.fixed}
-        />
+        <Link to="/">
+          <Img
+            fixed={images.logo.childImageSharp.fixed}
+          />
+        </Link>
       </div>
 
 

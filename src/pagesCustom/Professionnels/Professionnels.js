@@ -141,7 +141,8 @@ const ProfessionnelsPage = () => {
     const title = 'RAWS - Production Audiovisuelle pour les professionnels';
     const image = 'https://rawssessions.com' + images.heroBackground.childImageSharp.src;
 
-    const mainVideo = videos.shift();
+    const mainVideo = videos[0];
+    const otherVideos = videos.slice(1);
 
     return (
         <>
@@ -167,10 +168,10 @@ const ProfessionnelsPage = () => {
               />
 
               <div id={s.heroHeaderOvalBckgd}>
-                  <Img
-                      fixed={images.headerOvalBckgd2.childImageSharp.fixed}
-                      alt="RAWS"
-                  />
+                <Img
+                    fixed={images.headerOvalBckgd2.childImageSharp.fixed}
+                    alt="RAWS"
+                />
               </div>
 
               <Link
@@ -184,10 +185,12 @@ const ProfessionnelsPage = () => {
 
               <div id={s.heroHeader}>
                   <div id={s.heroLogo}>
+                    <Link to="/">
                       <Img
                           fixed={images.logo.childImageSharp.fixed}
                           alt="RAWS"
                       />
+                    </Link>
                   </div>
 
                   <div id={s.heroHeaderRight}>
@@ -247,7 +250,7 @@ const ProfessionnelsPage = () => {
                     </p>
                 </div>
 
-                {videos.map((video, index, array) => {
+                {otherVideos.map((video, index, array) => {
                     if (index % 2 !== 0) {
                         return null;
                     }
