@@ -207,7 +207,7 @@ const ProfessionnelsPage = () => {
 
               <div id="intro" className={s.intro}>
                 <p>
-                  <span className="recoleta">Raws</span> est une boite de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet etc...
+                  <span className="recoleta">Raws</span> est une société de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet etc...
                         <br />
                   <br />Quelque soit votre domaine d'activité, nous nous adaptons pour vous proposer une prestation personnalisée qui répondra à vos attentes,
                         telles que des présentations de produits, des interviews, les coulisses de votre activité ou encore des prises de vues de vos locaux.
@@ -438,7 +438,7 @@ const ProfessionnelsPage = () => {
 
                     <div className={s.devisRight}>
                         <p>
-                            N'hésitez pas à nous contacter en utilisant le formulaire de contact ci-dessous, pour discuter de votre projet, quel qu'il soit. 
+                            N'hésitez pas à nous contacter en utilisant le formulaire ci-dessous, pour discuter de votre projet, quel qu'il soit. 
                             <br />
                             <br />Nous vous répondrons rapidement et réaliserons un devis adapté à votre demande.
                         </p>
