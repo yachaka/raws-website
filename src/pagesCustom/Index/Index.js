@@ -34,7 +34,7 @@ const IndexPage = () => {
         }
       }
 
-      accueilPro: file(relativePath: { eq: "assets/images/accueil-professionnels.jpg" }) {
+      accueilPro: file(relativePath: { eq: "assets/images/spot-luminaires.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2200, quality: 90) {
             ...GatsbyImageSharpFluid
