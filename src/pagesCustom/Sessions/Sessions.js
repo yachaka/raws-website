@@ -14,6 +14,21 @@ import s from './Sessions.module.scss';
 
 const videos = [
     {
+        url: 'https://www.youtube.com/embed/Mar0nsoI-fs',
+        title: 'Julian The Drifter - Deep River Blues',
+        desc: '',
+    },      
+    {
+        url: 'https://www.youtube.com/embed/zXrs-_1Wny4',
+        title: 'Christopher Colletta & Fame Jane - The Price',
+        desc: '',
+    },      
+    {
+        url: 'https://www.youtube.com/embed/iJSaCBjEHBc',
+        title: 'Anton - Song to Song',
+        desc: '',
+    },   
+    {
         url: 'https://www.youtube.com/embed/DLIh5pTnTtE',
         title: 'David & Augusta - The Old Whistle song',
         desc: '',
