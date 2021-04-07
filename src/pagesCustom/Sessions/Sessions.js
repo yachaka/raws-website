@@ -200,7 +200,7 @@ const SessionsPage = () => {
                 <p>
                     <span className="recoleta">Raws &nbsp;Sessions</span> est une collection de vidéos musicales lives, acoustiques et intimistes, le plus souvent tournées en extérieur ou dans des lieux insolites.
                     <br/>
-                    <br/>Inspiré par des chaînes comme Mahogany, Cardinal Sessions, Western AF ou encore GemsOnVHS, nous voulons faire vivre la musique folk en France, 
+                    <br/>Inspirés par des chaînes comme Mahogany, Cardinal Sessions, Western AF ou encore GemsOnVHS, nous voulons faire vivre la musique folk en France, 
                     vous faire découvrir de nouveaux artistes au travers de sessions épurées et honnêtes.
                     <br/>
                     <br/>Nous filmons ce que nous aimons, quelle que soit la notoriété des artistes.
@@ -306,9 +306,9 @@ const SessionsPage = () => {
                     <h2>Participez à une session Raws</h2>
 
                     <p>
-                        Si vous êtes intéréssés pour tourner une session Raws, 
+                        Si vous êtes intéréssé pour tourner une session Raws, 
                         n'hésitez pas à nous contacter en nous envoyant une petite présentation de votre groupe / projet, 
-                        et des liens pour écouter ce que vous faites.
+                        ainsi que des liens pour écouter ce que vous faites.
                     </p>
 
                     <Btn Component={Link} to="/contact">
@@ -324,8 +324,8 @@ const SessionsPage = () => {
                     <iframe id={s.patreonVideo} width="560" height="350" src="https://www.youtube.com/embed/lmVo-UoyGh8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     <p>
-                        Raws sessions est une série de vidéos que nous auto-produisons.
-                        Les vidéos sont et resteront gratuites pour les artistes et bien sur pour vous. 
+                        Raws sessions est une collection de vidéos que nous auto-produisons.
+                        Les vidéos sont et resteront gratuites pour les artistes et bien sûr pour vous. 
                         Cependant, réaliser ces vidéos nous demande du temps et des ressources. 
                         <br/>
                         <br/>Patreon est un moyen pour nous de financer ce projet, vous pouvez nous aider et soutenir Raws en devenant contributeurs.
@@ -353,7 +353,7 @@ const SessionsPage = () => {
                         <h3 className="recoleta">Ben</h3>
 
                         <p className={s.desc}>
-                            Originaire de Revel, Benjamin a toujours été passionné par l'audiovisuel. Alors qu'il travaille comme cuisinier sur Paris, il se forme sur son temps libre, en auto didacte, aux techniques du son et s'exerce sur divers projets, en enregistrant plusieurs de ses amis musiciens. 
+                            Originaire de Revel, Benjamin a toujours été passionné par l'audiovisuel. Alors qu'il travaille comme cuisinier sur Paris, il se forme sur son temps libre, en autodidacte, aux techniques du son et s'exerce sur divers projets, en enregistrant plusieurs de ses amis musiciens. 
                             <br /><br />En 2017, il réalise son premier clip amateur pour un groupe Toulousain et se découvre une nouvelle passion pour la vidéo, la post-producion. C'est en novembre 2020 qu'il décide de créer une société et d'en faire son métier.
                         </p>
                     </div>
@@ -369,7 +369,7 @@ const SessionsPage = () => {
                         <h3 className="recoleta">Rémi</h3>
 
                         <p className={s.desc}>
-                            Né à Toulouse, Rémi a grandi à Revel où il passe une partie de sa scolarité. Passionné et attiré par l'univers de la photographie il entamera des études pour apprendre les techniques de cet art, par la suite il s’intéressera à la vidéo et peaufinera ses acquis de vidéaste au fil de ses expériences.
+                            Né à Toulouse, Rémi a grandi à Revel où il y passe une partie de sa scolarité. Passionné et attiré par l'univers de la photographie il entamera des études pour apprendre les techniques de cet art. Par la suite il s’intéressera à la vidéo et peaufinera ses acquis de vidéaste au fil de ses expériences.
                         </p>
                     </div>
                 </div>
