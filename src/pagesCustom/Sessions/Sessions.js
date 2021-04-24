@@ -12,7 +12,17 @@ import Nav from "../../components/Nav/Nav";
 
 import s from './Sessions.module.scss';
 
-const videos = [
+const videos = [      
+    {
+        url: 'https://www.youtube.com/embed/xxZFzECwCnU',
+        title: 'Sabotage - Wild Horses',
+        desc: '',
+    },       
+    {
+        url: 'https://www.youtube.com/embed/DlOcVrKLK1M',
+        title: 'Laura Wild - Hovive',
+        desc: '',
+    },      
     {
         url: 'https://www.youtube.com/embed/Mar0nsoI-fs',
         title: 'Julian The Drifter - Deep River Blues',
