@@ -12,7 +12,12 @@ import Nav from "../../components/Nav/Nav";
 
 import s from './Professionnels.module.scss';
 
-const videos = [
+const videos = [    
+    {
+        url: 'https://www.youtube.com/embed/SRJe1y2U5uI',
+        title: 'HOLOCENE \\ Ulule | Raws',
+        desc: '',
+    },
     {
         url: 'https://www.youtube.com/embed/DVWWQ7BB9Uk',
         title: 'Le Passage | Raws',
