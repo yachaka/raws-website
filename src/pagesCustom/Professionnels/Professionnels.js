@@ -12,7 +12,12 @@ import Nav from "../../components/Nav/Nav";
 
 import s from './Professionnels.module.scss';
 
-const videos = [    
+const videos = [     
+    {
+        url: 'https://www.youtube.com/embed/xbFQmiWoZsU',
+        title: 'CoeurVeillé & Céramique Toulousaine | Raws',
+        desc: '',
+    },   
     {
         url: 'https://www.youtube.com/embed/DVWWQ7BB9Uk',
         title: 'Le Passage | Raws',
