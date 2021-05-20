@@ -14,13 +14,13 @@ import s from './Professionnels.module.scss';
 
 const videos = [     
     {
-        url: 'https://www.youtube.com/embed/xbFQmiWoZsU',
-        title: 'CoeurVeillé & Céramique Toulousaine | Raws',
+        url: 'https://www.youtube.com/embed/DVWWQ7BB9Uk',
+        title: 'Le Passage | Raws',
         desc: '',
     },   
     {
-        url: 'https://www.youtube.com/embed/DVWWQ7BB9Uk',
-        title: 'Le Passage | Raws',
+        url: 'https://www.youtube.com/embed/xbFQmiWoZsU',
+        title: 'CoeurVeillé & Céramique Toulousaine | Raws',
         desc: '',
     },
     {
