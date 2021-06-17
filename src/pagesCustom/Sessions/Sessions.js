@@ -12,7 +12,12 @@ import Nav from "../../components/Nav/Nav";
 
 import s from './Sessions.module.scss';
 
-const videos = [     
+const videos = [      
+    {
+        url: 'https://www.youtube.com/embed/t9V7GAXN8JA',
+        title: 'Jell-oO - Thief',
+        desc: '',
+    },        
     {
         url: 'https://www.youtube.com/embed/mwVMTvi0tGc',
         title: 'Lilou - Mon Enfance',
