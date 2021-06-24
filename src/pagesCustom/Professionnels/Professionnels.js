@@ -15,7 +15,7 @@ import s from './Professionnels.module.scss';
 const videos = [       
     {
         url: 'https://www.youtube.com/embed/4a-ZBgMeUo4',
-        title: 'Exposition Nationale d'Elevage | Raws',
+        title: 'Exposition Nationale d\'Elevage | Raws',
         desc: '',
     },     
     {
