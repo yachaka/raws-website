@@ -12,7 +12,42 @@ import Nav from "../../components/Nav/Nav";
 
 import s from './Professionnels.module.scss';
 
-const videos = [       
+const videos = [           
+    {
+        url: 'https://www.youtube.com/embed/uN4s3-viNNs',
+        title: 'Peaux & Crèmes - Cœurveillé | Raws',
+        desc: '',
+    },         
+        {
+        url: 'https://www.youtube.com/embed/W44kOuq57UI',
+        title: 'Polina - Cœurveillé | Raws',
+        desc: '',
+    },                   
+    {
+        url: 'https://www.youtube.com/embed/oWfTLmeWjsg',
+        title: 'Marion - Cœurveillé | Raws',
+        desc: '',
+    },                   
+    {
+        url: 'https://www.youtube.com/embed/gLiPpdWeKjk',
+        title: 'Hind - Cœurveillé | Raws',
+        desc: '',
+    },                 
+    {
+        url: 'https://www.youtube.com/embed/cZtZI4q9494',
+        title: 'Clara - Cœurveillé | Raws',
+        desc: '',
+    },                
+    {
+        url: 'https://www.youtube.com/embed/9qYeCQSTIJI',
+        title: 'Alice - Cœurveillé | Raws',
+        desc: '',
+    },          
+    {
+        url: 'https://www.youtube.com/embed/gvmkBg5SKws',
+        title: 'Sorèze Nature | Raws',
+        desc: '',
+    },       
     {
         url: 'https://www.youtube.com/embed/4a-ZBgMeUo4',
         title: 'Exposition Nationale d\'Elevage | Raws',
