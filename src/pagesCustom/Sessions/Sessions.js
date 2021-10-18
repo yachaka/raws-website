@@ -12,7 +12,17 @@ import Nav from "../../components/Nav/Nav";
 
 import s from './Sessions.module.scss';
 
-const videos = [         
+const videos = [       
+    {
+        url: 'https://www.youtube.com/embed/NWkzXR-4PGg',
+        title: 'Augusta - No Coward | Raws Sessions',
+        desc: '',
+    },                  
+    {
+        url: 'https://www.youtube.com/embed/Azs3l47BPZ8',
+        title: 'Camille Bénâtre & Jessica Phan - Oh les sentiments ! | Raws Sessions',
+        desc: '',
+    },           
     {
         url: 'https://www.youtube.com/embed/8if5-z1jvRc',
         title: 'Beavers - There Is A Time',
