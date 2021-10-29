@@ -12,7 +12,12 @@ import Nav from "../../components/Nav/Nav";
 
 import s from './Sessions.module.scss';
 
-const videos = [       
+const videos = [  
+        {
+        url: 'https://www.youtube.com/embed/c2g_Z0wqYGQ',
+        title: 'MaTThieu - L\'Histoire Des Vainqueurs',
+        desc: '',
+    },            
     {
         url: 'https://www.youtube.com/embed/NWkzXR-4PGg',
         title: 'Augusta - No Coward | Raws Sessions',
