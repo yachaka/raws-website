@@ -14,7 +14,7 @@ import s from './Professionnels.module.scss';
 
 const videos = [
         {
-        url: 'https://youtu.be/0NulAwPUgFU',
+        url: 'https://www.youtube.com/embed/0NulAwPUgFU',
         title: 'Céramiques Toulousaines | Raws',
         desc: '',
     },         
