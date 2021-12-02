@@ -121,12 +121,12 @@ const IndexPage = () => {
                   </div>
 
                   <span className={s.text}>
-                    Professionnels
+                    Production
                   </span>
                 </h2>
               </div>
 
-              <Link to="/professionnels" className={s.heroImageLink}>
+              <Link to="/production" className={s.heroImageLink}>
                 <Img
                   className={s.heroImage2}
                   fluid={images.accueilPro.childImageSharp.fluid}
