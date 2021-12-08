@@ -13,6 +13,21 @@ import Nav from "../../components/Nav/Nav";
 import s from './Sessions.module.scss';
 
 const videos = [  
+                {
+        url: 'https://www.youtube.com/embed/SRU8ps4KD9k',
+        title: 'Terry Russell - After The Rain',
+        desc: '',
+    },            
+                {
+        url: 'https://www.youtube.com/embed/jNkrRqofK1A',
+        title: 'Orcival - Time is Coming',
+        desc: '',
+    },            
+                {
+        url: 'https://www.youtube.com/embed/wv8or7_2ai0',
+        title: 'Jaw Droski - Twisted By Our Desires',
+        desc: '',
+    },            
         {
         url: 'https://www.youtube.com/embed/c2g_Z0wqYGQ',
         title: 'MaTThieu - L\'Histoire Des Vainqueurs',
