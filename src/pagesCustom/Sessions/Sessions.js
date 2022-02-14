@@ -11,111 +11,113 @@ import Nav from "../../components/Nav/Nav";
 // import augusta1080p from '../../assets/videos/augusta-1080p.mp4';
 
 import s from './Sessions.module.scss';
+import VideoGrid from "../../components/VideoGrid";
 
-const videos = [  
-        {
-        url: 'https://www.youtube.com/embed/c2g_Z0wqYGQ',
+const videos = [
+    {
+        youtubeVideoID: 'c2g_Z0wqYGQ',
         title: 'MaTThieu - L\'Histoire Des Vainqueurs',
         desc: '',
     },            
     {
-        url: 'https://www.youtube.com/embed/NWkzXR-4PGg',
+        youtubeVideoID: 'NWkzXR-4PGg',
         title: 'Augusta - No Coward | Raws Sessions',
         desc: '',
-    },                  
+    },
     {
-        url: 'https://www.youtube.com/embed/Azs3l47BPZ8',
+        youtubeVideoID: 'Azs3l47BPZ8',
         title: 'Camille Bénâtre & Jessica Phan - Oh les sentiments ! | Raws Sessions',
         desc: '',
     },           
     {
-        url: 'https://www.youtube.com/embed/8if5-z1jvRc',
+        youtubeVideoID: '8if5-z1jvRc',
         title: 'Beavers - There Is A Time',
         desc: '',
     },        
     
-        {
-        url: 'https://www.youtube.com/embed/olcZjkRsmDo',
+    {
+        youtubeVideoID: 'olcZjkRsmDo',
         title: 'Karl Socasau - Like I Do',
         desc: '',
     },        
     {
-        url: 'https://www.youtube.com/embed/t9V7GAXN8JA',
+        youtubeVideoID: 't9V7GAXN8JA',
         title: 'Jell-oO - Thief',
         desc: '',
     },        
     {
-        url: 'https://www.youtube.com/embed/mwVMTvi0tGc',
+        youtubeVideoID: 'mwVMTvi0tGc',
         title: 'Lilou - Mon Enfance',
         desc: '',
     },          
     {
-        url: 'https://www.youtube.com/embed/xxZFzECwCnU',
+        youtubeVideoID: 'xxZFzECwCnU',
         title: 'Sabotage - Wild Horses',
         desc: '',
     },       
     {
-        url: 'https://www.youtube.com/embed/DlOcVrKLK1M',
+        youtubeVideoID: 'DlOcVrKLK1M',
         title: 'Laura Wild - Hovive',
         desc: '',
     },      
     {
-        url: 'https://www.youtube.com/embed/Mar0nsoI-fs',
+        youtubeVideoID: 'Mar0nsoI-fs',
         title: 'Julian The Drifter - Deep River Blues',
         desc: '',
     },      
     {
-        url: 'https://www.youtube.com/embed/zXrs-_1Wny4',
+        youtubeVideoID: 'zXrs-_1Wny4',
         title: 'Christopher Colletta & Fame Jane - The Price',
         desc: '',
     },      
     {
-        url: 'https://www.youtube.com/embed/iJSaCBjEHBc',
+        youtubeVideoID: 'iJSaCBjEHBc',
         title: 'Anton - Song to Song',
         desc: '',
     },   
     {
-        url: 'https://www.youtube.com/embed/DLIh5pTnTtE',
+        youtubeVideoID: 'DLIh5pTnTtE',
         title: 'David & Augusta - The Old Whistle song',
         desc: '',
     },   
     {
-        url: 'https://www.youtube.com/embed/eUVXOnAdCfg',
+        youtubeVideoID: 'eUVXOnAdCfg',
         title: 'Marty Went Back - Bushes',
         desc: '',
     },
     {
-        url: 'https://www.youtube.com/embed/ISYLWUvP8rk',
+        youtubeVideoID: 'ISYLWUvP8rk',
         title: 'StanLei - Bright Blue',
         desc: '',
     },
     {
-        url: 'https://www.youtube.com/embed/R74q_ITO4XU',
+        youtubeVideoID: 'R74q_ITO4XU',
         title: 'Zitoune - The River (Aurora Cover)',
         desc: '',
     },
     {
-        url: 'https://www.youtube.com/embed/EzPY_Ne0erw',
+        youtubeVideoID: 'EzPY_Ne0erw',
         title: 'Augusta - The Feeling\'s Gone',
         desc: '',
     },
     {
-        url: 'https://www.youtube.com/embed/k6MYyJGcLU0',
+        youtubeVideoID: 'k6MYyJGcLU0',
         title: 'Tindaya - Words We Never Say',
         desc: '',
     },
     {
-        url: 'https://www.youtube.com/embed/8cUG-oFeTfo',
+        youtubeVideoID: '8cUG-oFeTfo',
         title: 'FLO - Comme Je Suis',
         desc: '',
     },
     {
-        url: 'https://www.youtube.com/embed/i7bljfLBmW0',
+        youtubeVideoID: 'i7bljfLBmW0',
         title: 'David William - Hold Me Down',
         desc: '',
     },
     {
-        url: 'https://www.youtube.com/embed/Wt5O_3Ap9TQ',
+        youtubeVideoID: 'Wt5O_3Ap9TQ',
+        // url: 'https://www.youtube.com/embed/Wt5O_3Ap9TQ',
         title: 'Augusta - The Birds',
         desc: '',
     },
@@ -164,22 +166,6 @@ const SessionsPage = () => {
           }
         }
       }
-
-      remi: file(relativePath: { eq: "assets/images/remi.jpg" }) {
-        childImageSharp {
-          fixed(width: 120, height: 120, quality: 90) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-
-      ben: file(relativePath: { eq: "assets/images/ben.jpg" }) {
-        childImageSharp {
-          fixed(width: 120, height: 120, quality: 90) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
     }
   `);
 
@@ -199,16 +185,12 @@ const SessionsPage = () => {
 
             <Nav
                 links={[
-                    { elId: 'intro', text: 'Intro' },
-                    { elId: 'extraits', text: 'Vidéos' },
-                    { elId: 'clip-musical', text: 'Participer' },
-                    { elId: 'supportez-nous', text: 'Nous soutenir' },
-                    { elId: 'a-propos', text: 'À propos' },
+                    { url: '/', text: 'Production audiovisuelle' },
                 ]}
                 switchBtn="pro"
             />
 
-            <div id={s.hero}>
+            {/*<div id={s.hero}>
                 <Img
                     fluid={images.heroBackground.childImageSharp.fluid}
                     style={{ height: '100%' }}
@@ -221,6 +203,7 @@ const SessionsPage = () => {
                     />
                 </div>
 
+                {/*
                 <Link
                     to="/professionnels"
                     id={s.heroSwitch}
@@ -229,11 +212,12 @@ const SessionsPage = () => {
                 >
                     Pro
                 </Link>
+                
 
                 <div id={s.heroHeader}>
                     
 
-                    <div id={s.heroLogo}>
+                    {/*<div id={s.heroLogo}>
                         <Link to="/">
                             <Img
                                 fixed={images.logo.childImageSharp.fixed}
@@ -250,12 +234,16 @@ const SessionsPage = () => {
                         {/*<FacebookPill className={s.pillMarged} />
                         <InstagramPill className={s.pillMarged} />
                         <YoutubePill className={s.pillMarged} />
-                        <TwitterPill />*/}
+                        <TwitterPill />
                     </div>
                 </div>
-            </div>
+            </div>*/}
 
+            <h1 id={s.pageTitle}> Raws Sessions Musicales</h1>
 
+            <VideoGrid
+                videos={videos}
+            />
 
             <div id="intro" className={s.intro}>
                 <p>
@@ -267,88 +255,6 @@ const SessionsPage = () => {
                     <br/>Nous filmons ce que nous aimons, quelle que soit la notoriété des artistes.
                 </p>
             </div>
-
-
-            <div id="extraits" className={`${s.videosExtracts} container`}>
-                <h2>Nos Réalisations</h2>
-
-
-                <div id={s.mainExtract}>
-                    <div id={s.mainExtractVideo}>
-                        <iframe
-                            width="100%"
-                            src={mainVideo.url}
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
-
-                    <p id={s.mainExtractDesc}>
-                        <span id={s.mainExtractTitle}>{mainVideo.title}</span>
-                        <br />
-                        {mainVideo.desc}
-                    </p>
-                </div>
-
-                {otherVideos.map((video, index, array) => {
-                    if (index % 2 !== 0) {
-                        return null;
-                    }
-
-                    const v1 = video;
-                    const v2 = array[index + 1];
-
-                    return (
-                        <div className={s.secondaryExtracts} key={v1.url}>
-                            <div className={s.secondaryExtract}>
-                                <div className={s.secondaryExtractVideo}>
-                                    <iframe
-                                        width="100%"
-                                        src={v1.url}
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                                        allowfullscreen
-                                    ></iframe>
-                                </div>
-
-                                <div className={s.secondaryExtractInfos}>
-                                    <p>
-                                        <span className={s.secondaryExtractVideoTitle}>{v1.title}</span>
-                                        <br />
-                                        {v1.desc}
-                                    </p>
-                                </div>
-                            </div>
-
-                            {v2 && (
-                                <div className={s.secondaryExtract}>
-                                    <div className={s.secondaryExtractVideo}>
-                                        <iframe
-                                            width="100%"
-                                            src={v2.url}
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                                            allowfullscreen
-                                        ></iframe>
-                                    </div>
-
-                                    <div className={s.secondaryExtractInfos}>
-                                        <p>
-                                            <span className={s.secondaryExtractVideoTitle}>{v2.title}</span>
-                                            <br />
-                                            {v2.desc}
-                                        </p>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    );
-                })}
-
-            </div>
-
-
 
 
 
@@ -397,43 +303,6 @@ const SessionsPage = () => {
                 <Btn Component="a" href="https://www.patreon.com/rawssessions" className={s.patreonBtn} target="_blank" rel="noopener noreferrer">
                     Nous soutenir sur Patreon
                 </Btn>
-            </div>
-
-            <div id="a-propos" className={s.aboutUs}>
-                <h2>À propos de nous</h2>
-
-                <div id={s.aboutUs_Us}>
-                    <div className={s.person}>
-                        <div className={s.image}>
-                            <Img
-                                fixed={images.ben.childImageSharp.fixed}
-                                alt="Homme avec un bonnet et une veste d'hiver, et fond de forêt"
-                            />
-                        </div>
-
-                        <h3 className="recoleta">Ben</h3>
-
-                        <p className={s.desc}>
-                            Originaire de Revel, Benjamin a toujours été passionné par l'audiovisuel. Alors qu'il travaille comme cuisinier sur Paris, il se forme sur son temps libre, en autodidacte, aux techniques du son et s'exerce sur divers projets, en enregistrant plusieurs de ses amis musiciens. 
-                            <br /><br />En 2017, il réalise son premier clip amateur pour un groupe Toulousain et se découvre une nouvelle passion pour la vidéo, la post-producion. C'est en novembre 2020 qu'il décide de créer une société et d'en faire son métier.
-                        </p>
-                    </div>
-
-                    <div className={s.person}>
-                        <div className={s.image}>
-                            <Img
-                                fixed={images.remi.childImageSharp.fixed}
-                                alt="Homme avec un bonnet, portant un appareil photo, et fond de nature"
-                            />
-                        </div>
-
-                        <h3 className="recoleta">Rémi</h3>
-
-                        <p className={s.desc}>
-                            Né à Toulouse, Rémi a grandi à Revel où il y passe une partie de sa scolarité. Passionné et attiré par l'univers de la photographie il entamera des études pour apprendre les techniques de cet art. Par la suite il s’intéressera à la vidéo et peaufinera ses acquis de vidéaste au fil de ses expériences.
-                        </p>
-                    </div>
-                </div>
             </div>
 
 

@@ -4,10 +4,11 @@
 
 nav {
   z-index: 101;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
+  overflow: auto;
   background-color: #000;
   padding: 12px;
   opacity: 0;
@@ -66,7 +67,7 @@ nav {
       transform: translateX(-25%);
       transition: all 250ms ease;
 
-      &.selected {
+      &:hover, &.selected {
         a {
           background-color: #202020;
           color: $beige;

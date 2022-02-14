@@ -9,6 +9,16 @@ import Btn from "../../components/Btn/Btn";
 const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
 
 export default function Contact({ }) {
+  function showPhone() {
+    const el = document.getElementById('phone-placeholder');
+    el.innerHTML = atob('dm90cmVAbWFpbC5jb20=');
+  }
+
+  function showEmail() {
+    const el = document.getElementById('email-placeholder');
+    el.innerHTML = atob('MDYgMTEgMTEgMTEgMTE=');
+  }
+
   const images = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "assets/images/logo-raws-beige.jpg" }) {
@@ -135,6 +145,25 @@ export default function Contact({ }) {
           On vous recontacte bientôt !
         </p>
       )}
+
+      <div id={s.contactInfos}>
+        <p id="email-placeholder">
+          <button
+            onClick={showEmail}
+            className={s.showContactInfoBtn}
+          >
+            Voir l'email
+          </button>
+        </p>
+        <p id="phone-placeholder">
+          <button
+            onClick={showPhone}
+            className={s.showContactInfoBtn}
+          >
+            Voir le téléphone
+          </button>
+        </p>
+      </div>
 
       <form
         id="contact-form"

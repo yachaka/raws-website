@@ -5,6 +5,12 @@ $margin-right-of-logo: 30px;
 $logo-size: 100px;
 $oval-backgd-width: 1220px;
 
+#pageTitle {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
 #hero {
   position: relative;
   height: 100vh;
@@ -17,7 +23,7 @@ $oval-backgd-width: 1220px;
   top: 75px;
   margin-left: ($oval-backgd-width / 2 * -1) + 100; // 50 to move the shadow more towards the text
   margin-top: -125px;
-  opacity: .5;
+  opacity: .7;
 }
 
 #heroHeader {
@@ -153,131 +159,131 @@ $oval-backgd-width: 1220px;
   }
 
 
-  #mainExtract {
-    margin-bottom: 70px;
-    overflow: auto;
+  // #mainExtract {
+  //   margin-bottom: 70px;
+  //   overflow: auto;
 
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      margin: 0 -24px;
-    }
+  //   @media screen and (max-width: $phone-upper-breakpoint) {
+  //     margin: 0 -24px;
+  //   }
 
-    #mainExtractVideo {
-      width: 66%;
-      display: block;
-      margin-right: 40px;
-      float: left;
+  //   #mainExtractVideo {
+  //     width: 66%;
+  //     display: block;
+  //     margin-right: 40px;
+  //     float: left;
 
-      iframe {
-        width: 100%;
-        height: 400px;
-      }
+  //     iframe {
+  //       width: 100%;
+  //       height: 400px;
+  //     }
 
-      @media screen and (max-width: $phone-upper-breakpoint) {
-        width: 100%;
-        float: none;
-        margin-bottom: 24px;
-        margin-right: 0;
+  //     @media screen and (max-width: $phone-upper-breakpoint) {
+  //       width: 100%;
+  //       float: none;
+  //       margin-bottom: 24px;
+  //       margin-right: 0;
 
-        iframe {
-          height: 300px;
-        }
-      }
-    }
+  //       iframe {
+  //         height: 300px;
+  //       }
+  //     }
+  //   }
 
-    #mainExtractDesc {
-      overflow: hidden;
-      font-size: 26px;
-      line-height: 40px;
-      opacity: .8;
+  //   #mainExtractDesc {
+  //     overflow: hidden;
+  //     font-size: 26px;
+  //     line-height: 40px;
+  //     opacity: .8;
 
-      #mainExtractTitle {
-        font-size: 30px;
-        font-weight: bold;
-      }
+  //     #mainExtractTitle {
+  //       font-size: 30px;
+  //       font-weight: bold;
+  //     }
 
-      @media screen and (min-width: $desktops-lower-breakpoint) {
-        font-size: 30px;
+  //     @media screen and (min-width: $desktops-lower-breakpoint) {
+  //       font-size: 30px;
 
-        #mainExtractTitle {
-          font-size: 36px;
-        }
-      }
+  //       #mainExtractTitle {
+  //         font-size: 36px;
+  //       }
+  //     }
 
-      @media screen and (max-width: $phone-upper-breakpoint) {
-        font-size: 20px;
-        line-height: 26px;
-        padding: 12px 24px 24px 24px;
-        margin-bottom: 70px;
+  //     @media screen and (max-width: $phone-upper-breakpoint) {
+  //       font-size: 20px;
+  //       line-height: 26px;
+  //       padding: 12px 24px 24px 24px;
+  //       margin-bottom: 70px;
 
-        #mainExtractTitle {
-          font-size: 26px;
-        }
-      }
-    }
-  }
+  //       #mainExtractTitle {
+  //         font-size: 26px;
+  //       }
+  //     }
+  //   }
+  // }
 
-  .secondaryExtracts {
-    display: flex;
-    flex-direction: row;
-    margin: 0 -35px 50px;
+  // .secondaryExtracts {
+  //   display: flex;
+  //   flex-direction: row;
+  //   margin: 0 -35px 50px;
 
-    @media screen and (max-width: 1170px) {
-      flex-direction: column;
-      margin: -30px 0;
-    }
-
-
-    .secondaryExtract {
-      flex: 1;
-      margin: 0 35px;
-
-      @media screen and (max-width: 1170px) {
-        margin: 30px 0;
-      }
-
-      .secondaryExtractVideo {
-        width: 300px;
-        height: 190px;
-        float: left;
-        background-color: #000;
-        margin-right: 30px;
-
-        iframe {
-          height: 100%;
-        }
-
-        @media screen and (max-width: $phone-upper-breakpoint) {
-          width: 100%;
-          height: 300px;
-          float: none;
-          margin-bottom: 24px;
-        }
-      }
-
-      .secondaryExtractVideoTitle {
-        font-size: 26px;
-        font-weight: bold;
-      }
+  //   @media screen and (max-width: 1170px) {
+  //     flex-direction: column;
+  //     margin: -30px 0;
+  //   }
 
 
-      .secondaryExtractInfos {
-        overflow: hidden;
-        font-size: 22px;
-        line-height: 1.5;
-        opacity: .7;
-        margin-left: 30px;
+  //   .secondaryExtract {
+  //     flex: 1;
+  //     margin: 0 35px;
 
-        @media screen and (min-width: $desktops-lower-breakpoint) {
-          font-size: 26px;
-        }
+  //     @media screen and (max-width: 1170px) {
+  //       margin: 30px 0;
+  //     }
 
-        @media screen and (max-width: $phone-upper-breakpoint) {
-          font-size: 18px;
-          margin-left: 12px;
-        }
-      }
-    }
-  }
+  //     .secondaryExtractVideo {
+  //       width: 300px;
+  //       height: 190px;
+  //       float: left;
+  //       background-color: #000;
+  //       margin-right: 30px;
+
+  //       iframe {
+  //         height: 100%;
+  //       }
+
+  //       @media screen and (max-width: $phone-upper-breakpoint) {
+  //         width: 100%;
+  //         height: 300px;
+  //         float: none;
+  //         margin-bottom: 24px;
+  //       }
+  //     }
+
+  //     .secondaryExtractVideoTitle {
+  //       font-size: 26px;
+  //       font-weight: bold;
+  //     }
+
+
+  //     .secondaryExtractInfos {
+  //       overflow: hidden;
+  //       font-size: 22px;
+  //       line-height: 1.5;
+  //       opacity: .7;
+  //       margin-left: 30px;
+
+  //       @media screen and (min-width: $desktops-lower-breakpoint) {
+  //         font-size: 26px;
+  //       }
+
+  //       @media screen and (max-width: $phone-upper-breakpoint) {
+  //         font-size: 18px;
+  //         margin-left: 12px;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 
@@ -430,73 +436,6 @@ $oval-backgd-width: 1220px;
             color: lighten(#b33038, 7%);
         }
     }
-}
-
-
-
-.aboutUs {
-  text-align: center;
-  padding-top: 150px;
-  padding-bottom: 300px;
-
-  h2 {
-    margin-bottom: 115px;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      margin-bottom: 70px;
-    }
-  }
-
-  #aboutUs_Us {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    @media screen and (max-width: $phone-upper-breakpoint) {
-      flex-direction: column;
-      margin: -70px 0;
-    }
-
-
-    .person {
-      margin: 0 55px;
-
-      @media screen and (max-width: $phone-upper-breakpoint) {
-        margin: 70px 0;
-      }
-
-
-      h3 {
-        font-size: 36px;
-        line-height: 50px;
-        margin-bottom: 30px;
-
-        @media screen and (max-width: $phone-upper-breakpoint) {
-          font-size: 30px;
-          line-height: 38px;
-        }
-      }
-
-      .image {
-        display: inline-block;
-        margin-bottom: 40px;
-        background-color: #7A6245;
-        border-radius: 60px;
-        overflow: hidden;
-      }
-
-      p {
-        font-size: 22px;
-        line-height: 32px;
-        opacity: .7;
-
-        @media screen and (max-width: $phone-upper-breakpoint) {
-          font-size: 22px;
-          line-height: 30px;
-        }
-      }
-    }
-  }
 }
 
 

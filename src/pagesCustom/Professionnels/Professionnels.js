@@ -11,75 +11,107 @@ import Nav from "../../components/Nav/Nav";
 // import augusta1080p from '../../assets/videos/augusta-1080p.mp4';
 
 import s from './Professionnels.module.scss';
+import VideoGrid from "../../components/VideoGrid";
 
 const videos = [
-        {
-        url: 'https://www.youtube.com/embed/0NulAwPUgFU',
-        title: 'Céramiques Toulousaines | Raws',
-        desc: '',
-    },         
-    {
-        url: 'https://www.youtube.com/embed/uN4s3-viNNs',
-        title: 'Peaux & Crèmes - Cœurveillé | Raws',
-        desc: '',
-    },         
-        {
-        url: 'https://www.youtube.com/embed/W44kOuq57UI',
-        title: 'Polina - Cœurveillé | Raws',
-        desc: '',
-    },                   
-    {
-        url: 'https://www.youtube.com/embed/oWfTLmeWjsg',
-        title: 'Marion - Cœurveillé | Raws',
-        desc: '',
-    },                   
-    {
-        url: 'https://www.youtube.com/embed/gLiPpdWeKjk',
-        title: 'Hind - Cœurveillé | Raws',
-        desc: '',
-    },                 
-    {
-        url: 'https://www.youtube.com/embed/cZtZI4q9494',
-        title: 'Clara - Cœurveillé | Raws',
-        desc: '',
-    },                
-    {
-        url: 'https://www.youtube.com/embed/9qYeCQSTIJI',
-        title: 'Alice - Cœurveillé | Raws',
-        desc: '',
-    },          
-    {
-        url: 'https://www.youtube.com/embed/gvmkBg5SKws',
-        title: 'Sorèze Nature | Raws',
-        desc: '',
-    },       
-    {
-        url: 'https://www.youtube.com/embed/4a-ZBgMeUo4',
-        title: 'Exposition Nationale d\'Elevage | Raws',
-        desc: '',
-    },     
-    {
-        url: 'https://www.youtube.com/embed/DVWWQ7BB9Uk',
-        title: 'Le Passage | Raws',
-        desc: '',
-    },   
-    {
-        url: 'https://www.youtube.com/embed/xbFQmiWoZsU',
-        title: 'CoeurVeillé & Céramique Toulousaine | Raws',
-        desc: '',
-    },
-    {
-        url: 'https://www.youtube.com/embed/SRJe1y2U5uI',
-        title: 'HOLOCENE \\ Ulule | Raws',
-        desc: '',
-    },
-
-        {
-        url: 'https://www.youtube.com/embed/tgdYWu6bzss',
-        title: 'Lieu Commun | Raws',
-        desc: '',
-    },
+  {
+    vimeoVideoID: 664171798,
+    title: 'Le Passage',
+  },
+  {
+    vimeoVideoID: 644385833,
+    title: 'Céramiques Toulousaines',
+  },
+  {
+    vimeoVideoID: 664175429,
+    title: 'Soreze Nature',
+  },
+  {
+    vimeoVideoID: 644384658,
+    title: 'Coeurveillé',
+  },
+  {
+    vimeoVideoID: 668302791,
+    title: 'Exposition nationale d\'élevage 2021',
+  },
+  {
+    vimeoVideoID: 644384336,
+    title: 'Marion - Coeurveillé',
+  },
+  {
+    vimeoVideoID: 644363551,
+    title: 'Clara - Coeurveillé',
+  },
 ];
+
+// const videos = [
+//         {
+//         url: 'https://www.youtube.com/embed/0NulAwPUgFU',
+//         title: 'Céramiques Toulousaines | Raws',
+//         desc: '',
+//     },         
+//     {
+//         url: 'https://www.youtube.com/embed/uN4s3-viNNs',
+//         title: 'Peaux & Crèmes - Cœurveillé | Raws',
+//         desc: '',
+//     },         
+//         {
+//         url: 'https://www.youtube.com/embed/W44kOuq57UI',
+//         title: 'Polina - Cœurveillé | Raws',
+//         desc: '',
+//     },                   
+//     {
+//         url: 'https://www.youtube.com/embed/oWfTLmeWjsg',
+//         title: 'Marion - Cœurveillé | Raws',
+//         desc: '',
+//     },                   
+//     {
+//         url: 'https://www.youtube.com/embed/gLiPpdWeKjk',
+//         title: 'Hind - Cœurveillé | Raws',
+//         desc: '',
+//     },                 
+//     {
+//         url: 'https://www.youtube.com/embed/cZtZI4q9494',
+//         title: 'Clara - Cœurveillé | Raws',
+//         desc: '',
+//     },                
+//     {
+//         url: 'https://www.youtube.com/embed/9qYeCQSTIJI',
+//         title: 'Alice - Cœurveillé | Raws',
+//         desc: '',
+//     },          
+//     {
+//         url: 'https://www.youtube.com/embed/gvmkBg5SKws',
+//         title: 'Sorèze Nature | Raws',
+//         desc: '',
+//     },       
+//     {
+//         url: 'https://www.youtube.com/embed/4a-ZBgMeUo4',
+//         title: 'Exposition Nationale d\'Elevage | Raws',
+//         desc: '',
+//     },     
+//     {
+//         url: 'https://www.youtube.com/embed/DVWWQ7BB9Uk',
+//         title: 'Le Passage | Raws',
+//         desc: '',
+//     },   
+//     {
+//         url: 'https://www.youtube.com/embed/xbFQmiWoZsU',
+//         title: 'CoeurVeillé & Céramique Toulousaine | Raws',
+//         desc: '',
+//     },
+//     {
+//         url: 'https://www.youtube.com/embed/SRJe1y2U5uI',
+//         title: 'HOLOCENE \\ Ulule | Raws',
+//         desc: '',
+//     },
+
+//         {
+//         url: 'https://www.youtube.com/embed/tgdYWu6bzss',
+//         title: 'Lieu Commun | Raws',
+//         desc: '',
+//     },
+// ];
 
 const ProfessionnelsPage = () => {
     const images = useStaticQuery(graphql`
@@ -116,14 +148,14 @@ const ProfessionnelsPage = () => {
         }
       }
 
-      captationVideo: file(relativePath: { eq: "assets/images/ben-camera.jpg" }) {
+      captationVideo: file(relativePath: { eq: "assets/images/captation-video.jpg" }) {
         childImageSharp {
           fixed(width: 270, height: 270, quality: 90) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      captationVideoFull: file(relativePath: { eq: "assets/images/ben-camera.jpg" }) {
+      captationVideoFull: file(relativePath: { eq: "assets/images/captation-video.jpg" }) {
         childImageSharp {
           resize(width: 2200, height: 2200, fit: CONTAIN, quality: 90) {
             src
@@ -190,6 +222,30 @@ const ProfessionnelsPage = () => {
           }
         }
       }
+
+      blocMateriel: file(relativePath: { eq: "assets/images/bloc-materiel.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1600, quality: 90) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      remi: file(relativePath: { eq: "assets/images/remi.jpg" }) {
+        childImageSharp {
+          fixed(width: 120, height: 120, quality: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+
+      ben: file(relativePath: { eq: "assets/images/ben.jpg" }) {
+        childImageSharp {
+          fixed(width: 120, height: 120, quality: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -209,20 +265,31 @@ const ProfessionnelsPage = () => {
 
             <Nav links={[
                 { elId: 'intro', text: 'Intro' },
-                { elId: 'extraits', text: 'Réalisations' },
+                { elId: 'extraits', text: 'Nos réalisations' },
+                { url: '/sessions', text: 'Sessions musicales' },
                 { elId: 'savoir-faire', text: 'Services' },
                 { elId: 'devis', text: 'Devis' },
             ]} />
 
             <div id={s.hero}>
-              <Img
+              <div
+                id={s.heroVideo}
+                dangerouslySetInnerHTML={{
+                    __html: `
+                      <iframe src="https://player.vimeo.com/video/663364655?h=9cf95c3674&autoplay=1&title=0&byline=0&portrait=0" style="width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                    `,
+                  }
+                }
+              />
+
+              {/*<Img
                   fluid={images.heroBackground.childImageSharp.fluid}
                   style={{ height: '100%' }}
                   imgStyle={{ 'object-position': 'center left' }}
                   objectPosition="top left"
-              />
+              />*/}
 
-              <div id={s.heroHeaderOvalBckgd}>
+              {/*<div id={s.heroHeaderOvalBckgd}>
                 <Img
                     fixed={images.headerOvalBckgd2.childImageSharp.fixed}
                     alt="RAWS"
@@ -236,9 +303,9 @@ const ProfessionnelsPage = () => {
                   title="Sessions musicales intimistes"
               >
                   Sessions
-              </Link>
+              </Link>*/}
 
-              <div id={s.heroHeader}>
+              {/*<div id={s.heroHeader}>
                   <div id={s.heroLogo}>
                     <Link to="/">
                       <Img
@@ -253,25 +320,22 @@ const ProfessionnelsPage = () => {
                           Production Audiovisuelle
                       </p>
 
-                      {/*<FacebookPill className={s.pillMarged} />
+                      <FacebookPill className={s.pillMarged} />
                       <InstagramPill className={s.pillMarged} />
                       <YoutubePill className={s.pillMarged} />
-                      <TwitterPill />*/}
+                      <TwitterPill />
                   </div>
-              </div>
-
-              <div id="intro" className={s.intro}>
-                <p>
-                  <span className="recoleta">Raws</span> est une société de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet etc...
-                        <br />
-                  <br />Quelque soit votre domaine d'activité, nous nous adaptons pour vous proposer une prestation personnalisée qui répondra à vos attentes,
-                        telles que des présentations de produits, des interviews, les coulisses de votre activité ou encore des prises de vues de vos locaux.
-                </p>
-              </div>
+              </div>*/}
             </div>
 
-
-
+            <div id="intro" className={s.intro}>
+              <p>
+                <span className="recoleta">Raws</span> est une société de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet etc...
+                      <br />
+                <br />Quelque soit votre domaine d'activité, nous nous adaptons pour vous proposer une prestation personnalisée qui répondra à vos attentes,
+                      telles que des présentations de produits, des interviews, les coulisses de votre activité ou encore des prises de vues de vos locaux.
+              </p>
+            </div>
             
 
 
@@ -279,86 +343,9 @@ const ProfessionnelsPage = () => {
                 <h2>Nos Réalisations</h2>
 
 
-                <div id={s.mainExtract}>
-                    <div id={s.mainExtractVideo}>
-                        <iframe
-                            width="100%"
-                            src={mainVideo.url}
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
-                    {/*<VideoPlayer
-            id={s.mainExtractVideo}
-            videos={{
-              '480p': augusta480p,
-              '720p': augusta720p,
-              '1080p': augusta1080p,
-            }}
-          />*/}
-
-                    <p id={s.mainExtractDesc}>
-                        <span id={s.mainExtractTitle}>{mainVideo.title}</span>
-                        <br />
-                        {mainVideo.desc}
-                    </p>
-                </div>
-
-                {otherVideos.map((video, index, array) => {
-                    if (index % 2 !== 0) {
-                        return null;
-                    }
-
-                    const v1 = video;
-                    const v2 = array[index + 1];
-
-                    return (
-                        <div className={s.secondaryExtracts}>
-                            <div className={s.secondaryExtract}>
-                                <div className={s.secondaryExtractVideo}>
-                                    <iframe
-                                        width="100%"
-                                        src={v1.url}
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                                        allowfullscreen
-                                    ></iframe>
-                                </div>
-
-                                <div className={s.secondaryExtractInfos}>
-                                    <p>
-                                        <span className={s.secondaryExtractVideoTitle}>{v1.title}</span>
-                                        <br />
-                                        {v1.desc}
-                                    </p>
-                                </div>
-                            </div>
-
-                            {v2 && (
-                                <div className={s.secondaryExtract}>
-                                    <div className={s.secondaryExtractVideo}>
-                                        <iframe
-                                            width="100%"
-                                            src={v2.url}
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                                            allowfullscreen
-                                        ></iframe>
-                                    </div>
-
-                                    <div className={s.secondaryExtractInfos}>
-                                        <p>
-                                            <span className={s.secondaryExtractVideoTitle}>{v2.title}</span>
-                                            <br />
-                                            {v2.desc}
-                                        </p>
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    );
-                })}
+                <VideoGrid
+                  videos={videos}
+                />
 
             </div>
 
@@ -462,7 +449,17 @@ const ProfessionnelsPage = () => {
 
                     </div>
 
-                    <p id={s.stuffUsed}>
+                    <div id={s.stuffUsed}>
+                      <div id={s.stuffUsedImg}>
+                        <Img
+                            fluid={{
+                                ...images.blocMateriel.childImageSharp.fluid,
+                                sizes: "(max-width: 767px) 100vw, 50vw",
+                            }}
+                        />
+                      </div>
+
+                      <p>
                         <span id={s.stuffUsedTitle}>Matériel utilisé :</span>
                         <br /><br />
                         <strong>Caméra :</strong> Panasonic GH5, Fujifilm XT3
@@ -473,7 +470,8 @@ const ProfessionnelsPage = () => {
                         <br /><br />
                         <strong>Logiciel son :</strong> Cubase LE Al Elements 9.5
                         <br /><strong>Logiciel vidéo :</strong> Da Vinci Résolve 17
-                    </p>
+                      </p>
+                    </div>
                 </div>
             </div>
 
@@ -503,6 +501,43 @@ const ProfessionnelsPage = () => {
                         </Btn>
                     </div>
                 </div>
+            </div>
+
+            <div id="a-propos" className={s.aboutUs}>
+              <h2>À propos de nous</h2>
+
+              <div id={s.aboutUs_Us}>
+                  <div className={s.person}>
+                      <div className={s.image}>
+                          <Img
+                              fixed={images.ben.childImageSharp.fixed}
+                              alt="Homme avec un bonnet et une veste d'hiver, et fond de forêt"
+                          />
+                      </div>
+
+                      <h3 className="recoleta">Ben</h3>
+
+                      <p className={s.desc}>
+                          Originaire de Revel, Benjamin a toujours été passionné par l'audiovisuel. Alors qu'il travaille comme cuisinier sur Paris, il se forme sur son temps libre, en autodidacte, aux techniques du son et s'exerce sur divers projets, en enregistrant plusieurs de ses amis musiciens. 
+                          <br /><br />En 2017, il réalise son premier clip amateur pour un groupe Toulousain et se découvre une nouvelle passion pour la vidéo, la post-producion. C'est en novembre 2020 qu'il décide de créer une société et d'en faire son métier.
+                      </p>
+                  </div>
+
+                  <div className={s.person}>
+                      <div className={s.image}>
+                          <Img
+                              fixed={images.remi.childImageSharp.fixed}
+                              alt="Homme avec un bonnet, portant un appareil photo, et fond de nature"
+                          />
+                      </div>
+
+                      <h3 className="recoleta">Rémi</h3>
+
+                      <p className={s.desc}>
+                          Né à Toulouse, Rémi a grandi à Revel où il y passe une partie de sa scolarité. Passionné et attiré par l'univers de la photographie il entamera des études pour apprendre les techniques de cet art. Par la suite il s’intéressera à la vidéo et peaufinera ses acquis de vidéaste au fil de ses expériences.
+                      </p>
+                  </div>
+              </div>
             </div>
 
 

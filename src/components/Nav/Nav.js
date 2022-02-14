@@ -31,25 +31,26 @@ export default function Nav({
 
   /*************/
   /* Show/hide */
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    window.toggleNav = () => setIsVisible(bool => !bool);
+  const [isVisible, setIsVisible] = useState(true);
+  // Show on Scroll
+  // useEffect(() => {
+  //   window.toggleNav = () => setIsVisible(bool => !bool);
     
-    function onScroll() {
-      const top = window.document.scrollingElement.scrollTop;
+  //   function onScroll() {
+  //     const top = window.document.scrollingElement.scrollTop;
 
-      if (!isVisible && top > 400) {
-        setIsVisible(true);
-      } else if (isVisible && top <= 400) {
-        setIsVisible(false);
-      }
-    }
+  //     if (!isVisible && top > 400) {
+  //       setIsVisible(true);
+  //     } else if (isVisible && top <= 400) {
+  //       setIsVisible(false);
+  //     }
+  //   }
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+  //   window.addEventListener('scroll', onScroll, { passive: true });
+  //   onScroll();
 
-    return () => window.removeEventListener('scroll', onScroll, { passive: true });
-  }, [isVisible]);
+  //   return () => window.removeEventListener('scroll', onScroll, { passive: true });
+  // }, [isVisible]);
 
 
   /*************/
@@ -58,17 +59,20 @@ export default function Nav({
   const [currentLinkShown, setCurrentLinkShown] = useState(null);
 
   useEffect(() => {
-    const elementsScrollTop = links.map(
-      l => {
-        const el = document.getElementById(l.elId);
-        const top = el.offsetTop;
+    const elementsScrollTop = links
+      .filter(l => !!l.elId)
+      .map(
+        l => {
+          const el = document.getElementById(l.elId);
+          const top = el.offsetTop;
 
-        return {
-          top: top,
-          bottom: top + el.offsetHeight,
-        };
-      },
-    );
+          return {
+            elId: l.elId,
+            top: top,
+            bottom: top + el.offsetHeight,
+          };
+        },
+      );
     const navHeight = navEl.current.offsetHeight;
 
     function followScroll() {
@@ -79,7 +83,7 @@ export default function Nav({
         const curr = elementsScrollTop[i];
 
         if (top >= curr.top && top < curr.bottom) {
-          found = i;
+          found = curr.elId;
           break ;
         }
       }
@@ -125,19 +129,27 @@ export default function Nav({
 
       <ul id={s.desktopLinks}>
         {links.map((l, i) => (
-          <li className={i === currentLinkShown && s.selected}>
-            <a href={`#${l.elId}`}>{l.text}</a>
-          </li>
+          l.elId !== undefined
+            ? (
+              <li className={l.elId === currentLinkShown && s.selected}>
+                <a href={`#${l.elId}`}>{l.text}</a>
+              </li>
+            )
+            : (
+              <li>
+                <Link to={l.url}>{l.text}</Link>
+              </li>
+            )
         ))}
       </ul>
 
-      <Link
+      {/*<Link
         to={switchBtnUrl}
         className={`${s.partSwitch} recoleta ${s.partSwitchDesktop}`}
         title="Production audiovisuelle pour les professionnels"
       >
         {switchBtnTxt}
-      </Link>
+      </Link>*/}
 
       <div id={s.mobileOverlayLinks} className={isMobileOverlayVisible && s.overlayVisible}>
         <button id={s.mobileLinksClose} onClick={closeMobileOverlay}>
@@ -146,19 +158,28 @@ export default function Nav({
 
         <ul>
           {links.map((l, i) => (
-            <li className={i === currentLinkShown && s.selected} key={l.elId}>
-              <a href={`#${l.elId}`} onClick={closeMobileOverlay}>{l.text}</a>
-            </li>
+            l.elId !== undefined
+              ? (
+                <li className={l.elId === currentLinkShown && s.selected} key={l.elId}>
+                  <a href={`#${l.elId}`} onClick={closeMobileOverlay}>{l.text}</a>
+                </li>
+              )
+              : (
+                <li>
+                  <Link to={l.url}>{l.text}</Link>
+                </li>
+              )
+            
           ))}
         </ul>
 
-        <Link
+        {/*<Link
           to={switchBtnUrl}
           className={`${s.partSwitch} recoleta`}
           title="Production audiovisuelle pour les professionnels"
         >
           {switchBtnTxt}
-        </Link>
+        </Link>*/}
       </div>
     </nav>
   );
