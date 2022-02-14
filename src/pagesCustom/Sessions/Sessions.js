@@ -13,8 +13,23 @@ import Nav from "../../components/Nav/Nav";
 import s from './Sessions.module.scss';
 import VideoGrid from "../../components/VideoGrid";
 
-const videos = [
+const videos = [  
     {
+        youtubeVideoID: 'SRU8ps4KD9k',
+        title: 'Terry Russell - After The Rain',
+        desc: '',
+    },            
+    {
+        youtubeVideoID: 'jNkrRqofK1A',
+        title: 'Orcival - Time is Coming',
+        desc: '',
+    },            
+    {
+        youtubeVideoID: 'wv8or7_2ai0',
+        title: 'Jaw Droski - Twisted By Our Desires',
+        desc: '',
+    },            
+        {
         youtubeVideoID: 'c2g_Z0wqYGQ',
         title: 'MaTThieu - L\'Histoire Des Vainqueurs',
         desc: '',
