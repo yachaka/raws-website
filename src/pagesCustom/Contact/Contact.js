@@ -11,12 +11,12 @@ const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet'
 export default function Contact({ }) {
   function showPhone() {
     const el = document.getElementById('phone-placeholder');
-    el.innerHTML = atob('dm90cmVAbWFpbC5jb20=');
+    el.innerHTML = atob('MDYgMTEgMTEgMTEgMTE=');
   }
 
   function showEmail() {
     const el = document.getElementById('email-placeholder');
-    el.innerHTML = atob('MDYgMTEgMTEgMTEgMTE=');
+    el.innerHTML = atob('dm90cmVAbWFpbC5jb20=');
   }
 
   const images = useStaticQuery(graphql`
@@ -152,7 +152,7 @@ export default function Contact({ }) {
             onClick={showEmail}
             className={s.showContactInfoBtn}
           >
-            Voir l'email
+            Voir l'email (...@mail.com)
           </button>
         </p>
         <p id="phone-placeholder">
@@ -160,7 +160,7 @@ export default function Contact({ }) {
             onClick={showPhone}
             className={s.showContactInfoBtn}
           >
-            Voir le téléphone
+            Voir le téléphone (06 00 ...)
           </button>
         </p>
       </div>

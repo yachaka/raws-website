@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 
 import burgerMenuIcon from "../../assets/images/icons/burger.svg";
 import s from "./Nav.module.scss";
+import Btn from '../Btn/Btn';
 
 export default function Nav({
   links,
@@ -142,6 +143,14 @@ export default function Nav({
             )
         ))}
       </ul>
+
+      <Btn
+        id={s.navContactBtn}
+        Component={Link}
+        to="/contact"
+      >
+        Contact
+      </Btn>
 
       {/*<Link
         to={switchBtnUrl}

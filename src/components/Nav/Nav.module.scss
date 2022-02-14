@@ -29,6 +29,7 @@ nav {
     display: none;
     float: right;
     margin-top: 4px;
+    margin-left: 10px;
 
     @media screen and (max-width: 800px) {
       display: block;
@@ -109,6 +110,14 @@ nav {
     li:nth-child(8) {
       transition-delay: 225ms;
     }
+  }
+
+  #navContactBtn {
+    float: right;
+    height: auto;
+    font-size: 19px;
+    line-height: 24px;
+    padding: 8px 16px;
   }
 }
 
