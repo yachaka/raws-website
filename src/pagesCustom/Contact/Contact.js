@@ -11,12 +11,12 @@ const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet'
 export default function Contact({ }) {
   function showPhone() {
     const el = document.getElementById('phone-placeholder');
-    el.innerHTML = atob('MDYgMTEgMTEgMTEgMTE=');
+    el.innerHTML = atob('MMDYgNDkgNzEgMzYgMzM=');
   }
 
   function showEmail() {
     const el = document.getElementById('email-placeholder');
-    el.innerHTML = atob('dm90cmVAbWFpbC5jb20=');
+    el.innerHTML = atob('YmVuamljMzFAaG90bWFpbC5jb20=');
   }
 
   const images = useStaticQuery(graphql`
