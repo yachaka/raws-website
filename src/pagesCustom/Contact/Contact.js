@@ -11,7 +11,7 @@ const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet'
 export default function Contact({ }) {
   function showPhone() {
     const el = document.getElementById('phone-placeholder');
-    el.innerHTML = atob('MMDYgNDkgNzEgMzYgMzM=');
+    el.innerHTML = atob('MDYgNDkgNzEgMzYgMzM=');
   }
 
   function showEmail() {
