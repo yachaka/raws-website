@@ -14,6 +14,10 @@ import s from './Professionnels.module.scss';
 import VideoGrid from "../../components/VideoGrid";
 
 const videos = [
+    {
+    vimeoVideoID: 673154034,
+    title: 'SETV 2021',
+  },
   {
     vimeoVideoID: 664171798,
     title: 'Le Passage',
