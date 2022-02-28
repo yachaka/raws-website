@@ -13,7 +13,32 @@ import Nav from "../../components/Nav/Nav";
 import s from './Sessions.module.scss';
 import VideoGrid from "../../components/VideoGrid";
 
-const videos = [  
+const videos = [ 
+                        {
+        youtubeVideoID: 'mrvcw1V2jL0',
+        title: 'J.Aubertin - Mr. N.O.B.O.D.Y.',
+        desc: '',
+    },   
+                    {
+        youtubeVideoID: 'K3wdSzOVmqU',
+        title: 'Gordie Chambers - Little Robin',
+        desc: '',
+    },   
+                {
+        youtubeVideoID: '57_aHsY7Iwg',
+        title: 'Zitoune - Caravan Park Song',
+        desc: '',
+    },       
+            {
+        youtubeVideoID: 'z1yGIYXbrmw',
+        title: 'Dear & Dearer - Cocaine',
+        desc: '',
+    },            
+        {
+        youtubeVideoID: 'sk6f2gIUsMo',
+        title: 'J.Aubertin - The Key Of Every Dream',
+        desc: '',
+    },            
     {
         youtubeVideoID: 'SRU8ps4KD9k',
         title: 'Terry Russell - After The Rain',
