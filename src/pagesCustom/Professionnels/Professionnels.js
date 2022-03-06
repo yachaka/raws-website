@@ -249,7 +249,7 @@ const ProfessionnelsPage = () => {
     }
   `);
 
-    const title = 'RAWS - Production Audiovisuelle pour les professionnels';
+    const title = 'RAWS - Production Audiovisuelle sur Toulouse';
     const image = 'https://rawssessions.com' + images.heroBackground.childImageSharp.src;
 
     const mainVideo = videos[0];
@@ -261,6 +261,7 @@ const ProfessionnelsPage = () => {
                 title={title}
                 image={image}
                 imageAlt="Guitariste chanteur, hangar désaffecté"
+                description="Raws est une société de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour votre commerce, entreprise, un évènement festif ou professionnel, les réseaux sociaux, sites internet, etc..."
             />
 
             <Nav links={[
@@ -330,7 +331,7 @@ const ProfessionnelsPage = () => {
 
             <div id="intro" className={s.intro}>
               <p>
-                <span className="recoleta">Raws</span> est une société de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet etc...
+                <span className="recoleta">Raws</span> est une société de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet, etc...
                       <br />
                 <br />Quelque soit votre domaine d'activité, nous nous adaptons pour vous proposer une prestation personnalisée qui répondra à vos attentes,
                       telles que des présentations de produits, des interviews, les coulisses de votre activité ou encore des prises de vues de vos locaux.

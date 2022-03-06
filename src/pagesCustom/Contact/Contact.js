@@ -9,14 +9,14 @@ import Btn from "../../components/Btn/Btn";
 const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
 
 export default function Contact({ }) {
-  function showPhone() {
-    const el = document.getElementById('phone-placeholder');
-    el.innerHTML = atob('MDYgMTEgMTEgMTEgMTE=');
-  }
+  // function showPhone() {
+  //   const el = document.getElementById('phone-placeholder');
+  //   el.innerHTML = atob('MDYgMTEgMTEgMTEgMTE=');
+  // }
 
   function showEmail() {
     const el = document.getElementById('email-placeholder');
-    el.innerHTML = atob('dm90cmVAbWFpbC5jb20=');
+    el.innerHTML = atob('cmF3cy5zZXNzaW9uc0BnbWFpbC5jb20=');
   }
 
   const images = useStaticQuery(graphql`
@@ -155,14 +155,14 @@ export default function Contact({ }) {
             Voir l'email (...@mail.com)
           </button>
         </p>
-        <p id="phone-placeholder">
+        {/* <p id="phone-placeholder">
           <button
             onClick={showPhone}
             className={s.showContactInfoBtn}
           >
             Voir le téléphone (06 00 ...)
           </button>
-        </p>
+        </p> */}
       </div>
 
       <form
