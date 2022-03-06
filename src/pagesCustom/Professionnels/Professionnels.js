@@ -14,6 +14,10 @@ import s from './Professionnels.module.scss';
 import VideoGrid from "../../components/VideoGrid";
 
 const videos = [
+    {
+    vimeoVideoID: 673154034,
+    title: 'SETV 2021',
+  },
   {
     vimeoVideoID: 664171798,
     title: 'Le Passage',
@@ -261,7 +265,7 @@ const ProfessionnelsPage = () => {
                 title={title}
                 image={image}
                 imageAlt="Guitariste chanteur, hangar désaffecté"
-                description="Raws est une société de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour votre commerce, entreprise, un évènement festif ou professionnel, les réseaux sociaux, sites internet, etc..."
+                description="Raws est une société de production audiovisuelle basée à Toulouse. Nous réalisons des vidéos institutionnelles et commerciales, pour votre commerce, entreprise, un évènement festif ou professionnel, les réseaux sociaux, sites internet, etc..."
             />
 
             <Nav links={[
@@ -331,7 +335,7 @@ const ProfessionnelsPage = () => {
 
             <div id="intro" className={s.intro}>
               <p>
-                <span className="recoleta">Raws</span> est une société de production audiovisuelle. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet, etc...
+                <span className="recoleta">Raws</span> est une société de production audiovisuelle basée à Toulouse. Nous réalisons des vidéos institutionnelles et commerciales, pour les réseaux sociaux, sites internet etc...
                       <br />
                 <br />Quelque soit votre domaine d'activité, nous nous adaptons pour vous proposer une prestation personnalisée qui répondra à vos attentes,
                       telles que des présentations de produits, des interviews, les coulisses de votre activité ou encore des prises de vues de vos locaux.
