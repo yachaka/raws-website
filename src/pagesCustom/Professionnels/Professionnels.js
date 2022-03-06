@@ -454,7 +454,7 @@ const ProfessionnelsPage = () => {
 
                     </div>
 
-                    <div id={s.stuffUsed}>
+                    {/*<div id={s.stuffUsed}>
                       <div id={s.stuffUsedImg}>
                         <Img
                             fluid={{
@@ -476,7 +476,7 @@ const ProfessionnelsPage = () => {
                         <strong>Logiciel son :</strong> Cubase LE Al Elements 9.5
                         <br /><strong>Logiciel vidéo :</strong> Da Vinci Résolve 17
                       </p>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
 
