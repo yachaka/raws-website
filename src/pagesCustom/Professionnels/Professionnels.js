@@ -281,7 +281,7 @@ const ProfessionnelsPage = () => {
                 id={s.heroVideo}
                 dangerouslySetInnerHTML={{
                     __html: `
-                      <iframe src="https://player.vimeo.com/video/663364655?h=9cf95c3674&autoplay=1&title=0&control=0&byline=0&portrait=0" style="width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                      <iframe src="https://player.vimeo.com/video/663364655?h=9cf95c3674&autoplay=1&title=0&controls=0&byline=0&portrait=0" style="width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
                     `,
                   }
                 }
