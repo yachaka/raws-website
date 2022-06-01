@@ -14,6 +14,36 @@ import s from './Sessions.module.scss';
 import VideoGrid from "../../components/VideoGrid";
 
 const videos = [ 
+        {
+        youtubeVideoID: 'e7kZ4O39WiU',
+        title: 'Andreas Kyriakou - In The Pines',
+        desc: '',
+    },   
+      {
+        youtubeVideoID: 'idyNShfBoh8',
+        title: 'Augusta - Give Me A Reason',
+        desc: '',
+    },   
+    {
+        youtubeVideoID: '6CZYZZAnMx8',
+        title: 'Inaayah - Carousel',
+        desc: '',
+    },   
+  {
+        youtubeVideoID: 'i9YeJdYc5yw',
+        title: 'Wildflower Union - One With Winter',
+        desc: '',
+    },   
+   {
+        youtubeVideoID: 'QYsQt9tuiL4',
+        title: 'Dear & Dearer - Session',
+        desc: '',
+    },   
+  {
+        youtubeVideoID: 'BnfJm22BNjY',
+        title: 'AM Higgins - Lower East Side',
+        desc: '',
+    },   
                         {
         youtubeVideoID: 'mrvcw1V2jL0',
         title: 'J.Aubertin - Mr. N.O.B.O.D.Y.',
