@@ -13,7 +13,16 @@ import Nav from "../../components/Nav/Nav";
 import s from './Professionnels.module.scss';
 import VideoGrid from "../../components/VideoGrid";
 
-const videos = [
+const videos = [     
+    {
+    vimeoVideoID: 730566317,
+    title: 'Holocene',
+  },
+        
+    {
+    vimeoVideoID: 716304110,
+    title: 'Meubles Lattes',
+  },
     {
     vimeoVideoID: 673154034,
     title: 'SETV 2021',
