@@ -18,6 +18,10 @@ const videos = [
     vimeoVideoID: 730566317,
     title: 'Holocene',
   },
+      {
+    vimeoVideoID: 730567002,
+    title: 'Bistrot Le Commerce',
+  },
         
     {
     vimeoVideoID: 716304110,
