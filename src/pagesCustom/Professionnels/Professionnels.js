@@ -18,7 +18,11 @@ const videos = [
     vimeoVideoID: 730566317,
     title: 'Holocene',
   },
-      {
+          {
+    vimeoVideoID: 731728320,
+    title: 'Morning Lights - Gordie Chambers',
+  },  
+    {
     vimeoVideoID: 730567002,
     title: 'Bistrot Le Commerce',
   },
